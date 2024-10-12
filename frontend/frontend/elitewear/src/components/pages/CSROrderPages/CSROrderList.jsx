@@ -6,6 +6,7 @@ import AdminNavBar from "../../common/adminNavBar/AdminNavBar";
 import CSRNavBar from "../../common/csrNavBar/CSRNavBar"; // Import CSR NavBar
 import { useAuthContext } from "../../../hooks/useAutContext"; // Import the AuthContext
 import { getUserRole } from "../../../hooks/useRoles"; // Import the global state
+import Footer from "./../../common/footer/Footer";
 
 const CSROrderList = () => {
   const [orders, setOrders] = useState([]);
@@ -214,6 +215,7 @@ const CSROrderList = () => {
           </table>
         )}
       </div>
+      <Footer />
     </div>
   );
 };
