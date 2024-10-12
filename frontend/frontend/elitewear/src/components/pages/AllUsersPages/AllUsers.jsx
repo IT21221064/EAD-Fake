@@ -6,6 +6,7 @@ import AdminNavBar from "../../common/adminNavBar/AdminNavBar";
 import CSRNavBar from "../../common/csrNavBar/CSRNavBar"; // Import CSR NavBar
 import { getUserRole } from "../../../hooks/useRoles"; // Import the global state
 import Footer from "../../common/footer/Footer";
+import { BiHome, BiExit } from "react-icons/bi";
 
 function AllUsers() {
   const { user } = useAuthContext();
