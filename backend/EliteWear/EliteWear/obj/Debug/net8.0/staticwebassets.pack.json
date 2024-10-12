@@ -1,0 +1,85 @@
+{
+  "Files": [
+    {
+      "Id": "C:\\Users\\Kivindu_PC\\Desktop\\4thYrSem1\\EAD\\EADProject\\Web\\EAD-Project\\backend\\EliteWear\\EliteWear\\wwwroot\\images\\20-550x550.jpg.jpeg",
+      "PackagePath": "staticwebassets\\images\\20-550x550.jpg.jpeg"
+    },
+    {
+      "Id": "C:\\Users\\Kivindu_PC\\Desktop\\4thYrSem1\\EAD\\EADProject\\Web\\EAD-Project\\backend\\EliteWear\\EliteWear\\wwwroot\\images\\6a60c4fa-e0c5-419d-89fd-47ada4b64226_blind1.jpg",
+      "PackagePath": "staticwebassets\\images\\6a60c4fa-e0c5-419d-89fd-47ada4b64226_blind1.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Kivindu_PC\\Desktop\\4thYrSem1\\EAD\\EADProject\\Web\\EAD-Project\\backend\\EliteWear\\EliteWear\\wwwroot\\images\\7b3a8bb5-a9f3-4809-ad25-0b569144861b_blind1.jpg",
+      "PackagePath": "staticwebassets\\images\\7b3a8bb5-a9f3-4809-ad25-0b569144861b_blind1.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Kivindu_PC\\Desktop\\4thYrSem1\\EAD\\EADProject\\Web\\EAD-Project\\backend\\EliteWear\\EliteWear\\wwwroot\\images\\Controller.jpg",
+      "PackagePath": "staticwebassets\\images\\Controller.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Kivindu_PC\\Desktop\\4thYrSem1\\EAD\\EADProject\\Web\\EAD-Project\\backend\\EliteWear\\EliteWear\\wwwroot\\images\\Keyboard1.jpg",
+      "PackagePath": "staticwebassets\\images\\Keyboard1.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Kivindu_PC\\Desktop\\4thYrSem1\\EAD\\EADProject\\Web\\EAD-Project\\backend\\EliteWear\\EliteWear\\wwwroot\\images\\Lexar128.jpg",
+      "PackagePath": "staticwebassets\\images\\Lexar128.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Kivindu_PC\\Desktop\\4thYrSem1\\EAD\\EADProject\\Web\\EAD-Project\\backend\\EliteWear\\EliteWear\\wwwroot\\images\\balla1.png",
+      "PackagePath": "staticwebassets\\images\\balla1.png"
+    },
+    {
+      "Id": "C:\\Users\\Kivindu_PC\\Desktop\\4thYrSem1\\EAD\\EADProject\\Web\\EAD-Project\\backend\\EliteWear\\EliteWear\\wwwroot\\images\\blind1.jpg",
+      "PackagePath": "staticwebassets\\images\\blind1.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Kivindu_PC\\Desktop\\4thYrSem1\\EAD\\EADProject\\Web\\EAD-Project\\backend\\EliteWear\\EliteWear\\wwwroot\\images\\blind2.jpg",
+      "PackagePath": "staticwebassets\\images\\blind2.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Kivindu_PC\\Desktop\\4thYrSem1\\EAD\\EADProject\\Web\\EAD-Project\\backend\\EliteWear\\EliteWear\\wwwroot\\images\\blind3.jpg",
+      "PackagePath": "staticwebassets\\images\\blind3.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Kivindu_PC\\Desktop\\4thYrSem1\\EAD\\EADProject\\Web\\EAD-Project\\backend\\EliteWear\\EliteWear\\wwwroot\\images\\blind4.jpg",
+      "PackagePath": "staticwebassets\\images\\blind4.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Kivindu_PC\\Desktop\\4thYrSem1\\EAD\\EADProject\\Web\\EAD-Project\\backend\\EliteWear\\EliteWear\\wwwroot\\images\\blind5.jpg",
+      "PackagePath": "staticwebassets\\images\\blind5.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Kivindu_PC\\Desktop\\4thYrSem1\\EAD\\EADProject\\Web\\EAD-Project\\backend\\EliteWear\\EliteWear\\wwwroot\\images\\channels4_profile.jpg",
+      "PackagePath": "staticwebassets\\images\\channels4_profile.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Kivindu_PC\\Desktop\\4thYrSem1\\EAD\\EADProject\\Web\\EAD-Project\\backend\\EliteWear\\EliteWear\\wwwroot\\images\\dogimages.png",
+      "PackagePath": "staticwebassets\\images\\dogimages.png"
+    },
+    {
+      "Id": "C:\\Users\\Kivindu_PC\\Desktop\\4thYrSem1\\EAD\\EADProject\\Web\\EAD-Project\\backend\\EliteWear\\EliteWear\\wwwroot\\images\\monitor.jpg",
+      "PackagePath": "staticwebassets\\images\\monitor.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Kivindu_PC\\Desktop\\4thYrSem1\\EAD\\EADProject\\Web\\EAD-Project\\backend\\EliteWear\\EliteWear\\wwwroot\\images\\steelseries-arctis-nova-pro.jpg",
+      "PackagePath": "staticwebassets\\images\\steelseries-arctis-nova-pro.jpg"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.EliteWear.Microsoft.AspNetCore.StaticWebAssets.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.build.EliteWear.props",
+      "PackagePath": "build\\EliteWear.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.buildMultiTargeting.EliteWear.props",
+      "PackagePath": "buildMultiTargeting\\EliteWear.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.buildTransitive.EliteWear.props",
+      "PackagePath": "buildTransitive\\EliteWear.props"
+    }
+  ],
+  "ElementsToRemove": []
+}

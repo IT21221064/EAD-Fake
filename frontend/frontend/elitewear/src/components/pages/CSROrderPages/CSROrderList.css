@@ -1,0 +1,221 @@
+/* Container for the order list */
+.csr-order-container {
+  padding: 30px;
+  padding-left: 150px;
+  padding-right: 150px;
+  max-width: 90%;
+  margin: 40px auto;
+  background-color: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* Title styling */
+.csr-order-title {
+  text-align: center;
+  margin-bottom: 30px;
+  font-size: 28px;
+  font-weight: 600;
+  color: #333;
+}
+
+/* Loading and error messages */
+.csr-order-loading,
+.csr-order-error {
+  text-align: center;
+  font-size: 18px;
+  margin: 20px;
+  color: #ff4d4d;
+}
+
+/* Empty state message */
+.csr-order-empty {
+  text-align: center;
+  font-size: 16px;
+  color: #777;
+  margin-top: 20px;
+}
+
+/* Table styling */
+.csr-order-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+  background-color: white;
+}
+
+.csr-order-table th,
+.csr-order-table td {
+  padding: 15px;
+  border: 1px solid #ddd;
+  text-align: center;
+  vertical-align: middle;
+}
+
+.csr-order-table th {
+  background-color: #0056b3; /* Darker blue for a more professional feel */
+  color: white;
+  font-weight: 700;
+  font-size: 16px;
+}
+
+.csr-order-table td {
+  font-size: 15px;
+  color: #555;
+}
+
+/* List of order items */
+.csr-order-items-list {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.csr-order-items-list li {
+  font-size: 14px;
+  margin-bottom: 5px;
+}
+
+/* Status selection dropdown */
+.csr-order-status-select {
+  padding: 8px 12px;
+  border-radius: 5px;
+  border: 1px solid #bbb;
+  font-size: 14px;
+  color: #333;
+}
+
+/* Update button */
+.csr-order-update-btn {
+  padding: 10px 18px;
+  background-color: #007bff; /* Corporate blue for buttons */
+  margin: 10px;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 500;
+  transition: background-color 0.3s ease;
+}
+
+.csr-order-update-btn:hover {
+  background-color: #0056b3; /* Darker shade on hover */
+}
+
+/* Search and Filter Container */
+.search-filter-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+  padding: 10px 0;
+  border-bottom: 2px solid #ddd;
+}
+
+/* Search bar styling */
+.search-bar {
+  width: 60%;
+  position: relative;
+}
+
+.search-bar input {
+  width: 100%;
+  padding: 10px 15px;
+  border-radius: 30px;
+  border: 1px solid #bbb;
+  font-size: 16px;
+  color: #333;
+  box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+}
+
+.search-bar input:focus {
+  border-color: #007bff;
+  outline: none;
+  box-shadow: 0 0 10px rgba(0, 123, 255, 0.2);
+}
+
+.search-bar button {
+  position: absolute;
+  right: 15px;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: transparent;
+  border: none;
+  font-size: 18px;
+  color: #555;
+  cursor: pointer;
+  padding: 0;
+}
+
+.search-bar button:hover {
+  color: #007bff;
+}
+
+/* Category dropdown styling */
+.category-dropdown {
+  width: 35%;
+  padding: 10px 15px;
+  border-radius: 30px;
+  border: 1px solid #bbb;
+  font-size: 16px;
+  color: #333;
+  transition: all 0.3s ease;
+}
+
+.category-dropdown:focus {
+  border-color: #007bff;
+  outline: none;
+  box-shadow: 0 0 10px rgba(0, 123, 255, 0.2);
+}
+
+.category-dropdown option {
+  font-size: 16px;
+  padding: 10px;
+}
+
+/* Add a hover effect to both input and dropdown */
+.search-bar input:hover,
+.category-dropdown:hover {
+  border-color: #0056b3;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .search-filter-container {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .search-bar {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+
+  .category-dropdown {
+    width: 100%;
+  }
+}
+
+/* Add responsiveness */
+@media (max-width: 768px) {
+  .csr-order-container {
+    padding: 20px;
+  }
+
+  .csr-order-title {
+    font-size: 24px;
+  }
+
+  .csr-order-table th,
+  .csr-order-table td {
+    padding: 10px;
+    font-size: 14px;
+  }
+
+  .csr-order-update-btn {
+    padding: 8px 14px;
+    
+  }
+}

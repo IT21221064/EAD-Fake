@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.8.34525.116
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EliteWear", "EliteWear\EliteWear.csproj", "{6C567FE6-0951-481A-AC34-14CE03EF3994}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{6C567FE6-0951-481A-AC34-14CE03EF3994}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6C567FE6-0951-481A-AC34-14CE03EF3994}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6C567FE6-0951-481A-AC34-14CE03EF3994}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6C567FE6-0951-481A-AC34-14CE03EF3994}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {ACF14903-262F-4DB0-A179-9E63804E5A0A}
+	EndGlobalSection
+EndGlobal

@@ -1,0 +1,117 @@
+/* Overall footer styles */
+footer {
+  background-color: #201d37; /* Dark background for premium feel */
+  padding: 10px 0;
+  color: #ffffff;
+  font-family: "Poppins", sans-serif; /* Clean, modern font */
+}
+
+footer h2,
+footer h4 {
+  color: #f8f9fa; /* Light text color for headers */
+  font-weight: 600;
+}
+
+footer p {
+  font-size: 16px;
+  color: #cccccc; /* Subtle gray for text */
+}
+
+footer .bg-primary {
+  background-color: #07012d !important; /* Dark gray background */
+}
+
+footer img {
+  border-radius: 50%; /* Rounded image for a classy look */
+}
+
+footer .stack {
+  text-align: center;
+}
+
+footer h2 {
+  font-size: 28px;
+  margin-top: 10px;
+}
+
+footer h4 {
+  font-size: 22px;
+  margin-bottom: 20px;
+}
+
+footer .text-white {
+  color: #ffffff;
+}
+
+/* Useful Links Styles */
+footer .nav {
+  padding-top: 10px;
+}
+
+footer .nav h4 {
+  margin-bottom: 15px;
+  color: #f8f9fa;
+  border-bottom: 2px solid #f0a500; /* Gold underline for section heading */
+  padding-bottom: 10px;
+}
+
+footer .nav a {
+  color: #dddddd;
+  font-size: 18px;
+  font-weight: 500;
+  text-decoration: none;
+  padding: 5px 0;
+  display: inline-block;
+  transition: color 0.3s ease-in-out, transform 0.3s ease-in-out;
+  color: #f0a500;
+}
+
+footer .nav a:hover {
+  color: #f0a500 !important;
+  transform: translateX(5px); /* Slide right effect on hover */
+}
+
+footer .nav .nav-link {
+  color: #f0a500;
+  padding: 8px 0;
+}
+
+/* Contact Info Styles */
+footer .contact-info p {
+  font-size: 18px;
+  margin: 0;
+  color: #f0a500;
+}
+
+footer .contact-info p:hover {
+  color: #f0a500; /* Gold hover effect for contact info */
+}
+
+/* Alignment fixes for all columns */
+footer .col {
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* Center vertically */
+  align-items: center; /* Center horizontally */
+}
+
+footer .contact-info {
+  text-align: center; /* Align contact text */
+}
+
+footer .nav {
+  align-items: center; /* Center nav links */
+  color: #f0a500;
+}
+
+/* Responsiveness */
+@media (max-width: 768px) {
+  footer .col {
+    margin-bottom: 30px;
+    text-align: center;
+  }
+
+  footer .nav {
+    justify-content: center;
+  }
+}

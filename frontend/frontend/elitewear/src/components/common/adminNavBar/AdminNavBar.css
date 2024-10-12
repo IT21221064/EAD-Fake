@@ -1,0 +1,144 @@
+/* Admin Navbar container */
+.admin-navbar {
+    width: 100%;
+    background-color: #07012d;
+    padding: 10px 20px;
+    position: relative;
+    top: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 10;
+    height: 90px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    font-family: 'Poppins', sans-serif;
+}
+
+/* Title link */
+.admin-title-link {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+}
+
+.admin-title {
+    color: #fff;
+    font-size: 22px;
+    margin-left: 20px;
+    font-weight: bold;
+    font-family: 'Press Start 2P', 'Poppins', sans-serif;
+}
+
+/* Navigation links container */
+.admin-nav-links {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+}
+
+.admin-nav-links li {
+    margin: 0;
+}
+
+/* Button styling */
+.admin-nav-btn {
+    padding: 10px 24px;
+    margin-left: 10px;
+    margin-right: 10px;
+    color: #fff; 
+    background-color: transparent;
+    border: none; 
+    font-size: 16px;
+    cursor: pointer;
+    font-family: 'Poppins', sans-serif;
+    font-weight: bold; 
+    position: relative; 
+    transition: color 0.3s ease-in-out;
+}
+
+.admin-logo{
+    width: 200px;
+    margin-bottom: 20px;
+}
+/* Hover effect: underline from left to right */
+.admin-nav-btn::after {
+    content: "";
+    position: absolute;
+    width: 0%;
+    height: 2px;
+    bottom: -2px;
+    left: 0;
+    background-color: #00ffff;
+    transition: width 0.3s ease-in-out; 
+}
+
+.admin-nav-btn:hover::after {
+    width: 100%; 
+}
+
+
+.admin-nav-btn:hover {
+    color: #f5f8f8; 
+}
+
+/* Logout button specific style */
+.admin-logout-btn {
+    color: #e63946; 
+    background-color: transparent; 
+    border: none; 
+    padding: 10px 0; 
+    font-size: 16px;
+    cursor: pointer;
+    font-family: 'Poppins', sans-serif;
+    font-weight: bold;
+    position: relative; 
+    transition: color 0.3s ease-in-out;
+}
+
+/* Hover effect for logout button */
+.admin-logout-btn:hover {
+    color: #fff; 
+}
+
+/* Underline effect for logout button */
+.admin-logout-btn::after {
+    content: "";
+    position: absolute;
+    width: 0%;
+    height: 2px;
+    bottom: -2px;
+    left: 0;
+    background-color: #e63946; 
+    transition: width 0.3s ease-in-out; 
+}
+
+.admin-logout-btn:hover::after {
+    width: 100%; /* Expands underline on hover */
+}
+
+
+
+/* Add spacing below navbar so content isn't hidden */
+body {
+    padding-top: 80px;
+}
+
+/* Responsive styling for smaller screens */
+@media (max-width: 768px) {
+    .admin-nav-links {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .admin-nav-btn {
+        margin: 5px 0;
+    }
+
+    .admin-title {
+        font-size: 18px;
+    }
+}

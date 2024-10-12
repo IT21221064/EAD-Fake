@@ -1,0 +1,177 @@
+/* Container for the vendor order list */
+.vendor-order-container {
+  padding: 30px;
+  padding-left: 150px;
+  padding-right: 150px;
+  max-width: 90%;
+  margin: 40px auto;
+  background-color: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+/* Search and Filter Container */
+.search-filter-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+  padding: 10px 0;
+  border-bottom: 2px solid #ddd;
+}
+
+/* Search bar styling */
+.search-bar {
+  width: 60%;
+  position: relative;
+}
+
+.search-bar input {
+  width: 100%;
+  padding: 10px 15px;
+  border-radius: 30px;
+  border: 1px solid #bbb;
+  font-size: 16px;
+  color: #333;
+  box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+}
+
+.search-bar input:focus {
+  border-color: #007bff;
+  outline: none;
+  box-shadow: 0 0 10px rgba(0, 123, 255, 0.2);
+}
+
+.search-bar button {
+  position: absolute;
+  right: 15px;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: transparent;
+  border: none;
+  font-size: 18px;
+  color: #555;
+  cursor: pointer;
+  padding: 0;
+}
+
+.search-bar button:hover {
+  color: #007bff;
+}
+
+/* Category dropdown styling */
+.category-dropdown {
+  width: 35%;
+  padding: 10px 15px;
+  border-radius: 30px;
+  border: 1px solid #bbb;
+  font-size: 16px;
+  color: #333;
+  transition: all 0.3s ease;
+}
+
+.category-dropdown:focus {
+  border-color: #007bff;
+  outline: none;
+  box-shadow: 0 0 10px rgba(0, 123, 255, 0.2);
+}
+
+.category-dropdown option {
+  font-size: 16px;
+  padding: 10px;
+}
+
+/* Add a hover effect to both input and dropdown */
+.search-bar input:hover,
+.category-dropdown:hover {
+  border-color: #0056b3;
+}
+
+/* Title styling */
+.vendor-order-title {
+  text-align: center; /* Center title text */
+  margin-bottom: 20px; /* Space below the title */
+}
+
+/* Loading state styling */
+.vendor-order-loading {
+  text-align: center; /* Center loading message */
+  font-size: 18px; /* Font size for loading */
+  color: #007bff; /* Color for loading text */
+}
+
+/* Error message styling */
+.vendor-order-error {
+  color: red; /* Red color for error messages */
+  text-align: center; /* Center error message */
+  margin-top: 10px; /* Space above error message */
+}
+
+/* Empty state message styling */
+.vendor-order-empty {
+  text-align: center; /* Center empty state message */
+  font-size: 16px; /* Font size for empty message */
+}
+
+/* Table styling */
+.vendor-order-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+  background-color: white;
+}
+
+/* Header row styling */
+.vendor-order-header {
+  background-color: #0056b3; /* Darker blue for a more professional feel */
+  color: white;
+  font-weight: 700;
+  font-size: 16px;
+  text-align: center;
+}
+
+/* Row styling */
+.vendor-order-row {
+  border-bottom: 1px solid #ccc; /* Border below each row */
+}
+
+/* Cell padding */
+.vendor-order-row td {
+  padding: 15px;
+  border: 1px solid #ddd;
+  text-align: center;
+  vertical-align: middle;
+}
+
+/* Item list styling */
+.vendor-order-items {
+  list-style-type: none; /* Remove default list styles */
+  padding: 0; /* Remove padding */
+  margin: 0; /* Remove margin */
+}
+
+/* Individual item styling */
+.vendor-order-item {
+  margin-bottom: 10px; /* Space between items */
+}
+
+/* Status select styling */
+.vendor-order-status-select {
+  margin-left: 10px; /* Space to the left of the select box */
+}
+
+/* Update button styling */
+.vendor-order-update-button {
+  margin-left: 10px; /* Space to the left of the button */
+  background-color: #28a745; /* Green background */
+  color: white; /* White text */
+  border: none; /* No border */
+  border-radius: 4px; /* Rounded corners */
+  padding: 5px 10px; /* Padding inside the button */
+  cursor: pointer; /* Pointer cursor on hover */
+}
+
+/* Update button hover effect */
+.vendor-order-update-button:hover {
+  background-color: #218838; /* Darker green on hover */
+}

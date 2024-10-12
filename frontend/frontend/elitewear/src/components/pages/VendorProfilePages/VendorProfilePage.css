@@ -1,0 +1,115 @@
+/* Vendor Profile Container */
+.vendor-profile-container {
+  max-width: 600px;
+  margin: 0 auto;
+  margin-top: 60px;
+  height: 400px;
+  padding: 20px;
+  background-color: #ffffff; /* Use white for a clean background */
+  border-radius: 8px;
+  box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1); /* Slightly darker shadow for depth */
+  transition: box-shadow 0.3s ease; /* Transition effect for box-shadow */
+}
+
+/* Hover effect for container */
+.vendor-profile-container:hover {
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2); /* Darker shadow on hover */
+}
+
+/* Header Styling */
+.vendor-profile-header {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.vendor-profile-title {
+  font-size: 28px; /* Increased font size */
+  font-weight: 600; /* Bold weight */
+  color: #333;
+  margin-bottom: 5px; /* Space below title */
+}
+
+.vendor-profile-subtitle {
+  font-size: 18px; /* Reduced size for subtitle */
+  color: #666; /* Softer color for subtitle */
+}
+
+/* Profile Details Styling */
+.vendor-profile-details {
+  background-color: #f0f4f8; /* Soft background color */
+  border: 1px solid #ddd;
+  padding: 20px;
+  border-radius: 8px;
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+.vendor-profile-info {
+  font-size: 24px; /* Slightly reduced size */
+  color: #444; /* Darker grey for better contrast */
+  margin-bottom: 10px;
+}
+
+/* Profile Actions - Buttons */
+.vendor-profile-actions {
+  padding-top: 60px;
+  text-align: center;
+}
+
+.vendor-profile-btn {
+  background-color: #007bff; /* Primary button color */
+  color: white;
+  border: none;
+  padding: 12px 24px; /* Increased padding */
+  margin: 10px;
+  border-radius: 5px; /* Rounded corners */
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s ease, transform 0.2s ease; /* Transition for hover effects */
+}
+
+.vendor-profile-btn:hover {
+  background-color: #0056b3; /* Darker on hover */
+  transform: translateY(-2px); /* Lift effect on hover */
+}
+
+/* Spacing and layout */
+.vendor-profile-container p {
+  margin: 0;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .vendor-profile-container {
+    padding: 15px; /* Slightly less padding for smaller screens */
+  }
+
+  .vendor-profile-title {
+    font-size: 24px; /* Adjust font size for smaller screens */
+  }
+
+  .vendor-profile-subtitle {
+    font-size: 16px; /* Adjust subtitle size */
+  }
+
+  .vendor-profile-btn {
+    width: 100%; /* Full-width buttons on small screens */
+    margin: 5px 0; /* Adjust margin for buttons */
+  }
+
+  .vendor-profile-info {
+    font-size: 18px; /* Adjust the font size if needed */
+    color: #333; /* Ensure the text color is consistent */
+  }
+  
+  .vendor-profile-info strong {
+    font-weight: bold; /* Ensure the label is bold */
+    color: #007bff; /* Optional: Set a different color for the label */
+  }
+  
+  .vendor-profile-info span {
+    font-weight: normal; /* Ensure the value is not bold */
+    color: #444; /* Optional: Set a color for the value */
+  }
+  
+}

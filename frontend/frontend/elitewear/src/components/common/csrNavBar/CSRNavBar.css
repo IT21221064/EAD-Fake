@@ -1,0 +1,120 @@
+/* CSR Navbar container */
+.csr-navcontainer {
+    width: 100%;
+    background-color: #07012d;
+    padding: 10px 20px;
+    position: relative;
+    top: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 10;
+    height: 90px;
+    font-family: 'Poppins', sans-serif;
+}
+
+.csr-logo{
+    width: 200px;
+    margin-bottom: 20px;
+}
+
+/* Title link */
+.csr-title-link {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+}
+
+.csr-title {
+    color: #fff;
+    font-size: 22px;
+    margin-left: 20px;
+    font-weight: bold;
+    font-family: 'Press Start 2P', 'Poppins', sans-serif;
+}
+
+/* Navigation links container */
+.csr-nav-links {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+}
+
+.csr-nav-links li {
+    margin: 0;
+}
+
+/* Button text styling (no box) */
+.csr-nav-btn {
+    padding: 10px 24px;
+    margin-left: 10px;
+    margin-right: 10px;
+    color: #fff; /* Text is white by default */
+    background-color: transparent; /* No background */
+    border: none; /* No border */
+    font-size: 16px;
+    cursor: pointer;
+    font-family: 'Poppins', sans-serif;
+    font-weight: bold; /* Bold text by default */
+    position: relative; /* Needed for underline effect */
+    transition: color 0.3s ease-in-out;
+}
+
+/* Hover effect: underline from left to right */
+.csr-nav-btn::after {
+    content: "";
+    position: absolute;
+    width: 0%;
+    height: 2px;
+    bottom: -2px;
+    left: 0;
+    background-color: #fafcfc; /* Cyan underline */
+    transition: width 0.3s ease-in-out; /* Smooth underline effect */
+}
+
+.csr-nav-btn:hover::after {
+    width: 100%; /* Expands underline */
+}
+
+
+/* Logout button specific style */
+.csr-logout-btn {
+    color: #e63946; /* Red text for logout by default */
+}
+
+.csr-logout-btn:hover {
+    color: #fff; /* Change to white text on hover */
+}
+
+.csr-logout-btn::after {
+    background-color: #e63946; /* Red underline for logout */
+}
+
+.csr-logout-btn:hover::after {
+    width: 100%; /* Expands underline */
+}
+
+/* Add spacing below navbar so content isn't hidden */
+body {
+    padding-top: 80px;
+}
+
+/* Responsive styling for smaller screens */
+@media (max-width: 768px) {
+    .csr-nav-links {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .csr-nav-btn {
+        margin: 5px 0;
+    }
+
+    .csr-title {
+        font-size: 18px;
+    }
+}

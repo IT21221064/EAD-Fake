@@ -1,0 +1,131 @@
+.admin-product-page {
+  border: 1px solid #ccc;
+  padding: 16px;
+  background-color: #fff;
+  margin: 5px;
+}
+
+.search-bar,
+.category-dropdown {
+  margin-bottom: 20px;
+  padding: 10px;
+  font-size: 16px;
+  margin-left: 10px;
+}
+
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+.product-card {
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  padding: 16px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  background-color: #fff;
+  transition: transform 0.2s ease-in-out;
+  position: relative;
+  overflow: hidden; /* Make sure content stays inside the card during animation */
+}
+
+.product-card:hover {
+  transform: scale(1.05);
+}
+
+.product-card::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 0;
+  width: 100%;
+  background: linear-gradient(
+    to bottom,
+    #f25c1c,
+    transparent
+  ); /* From yellow to transparent */
+  transition: height 0.5s ease-in-out; /* Animation duration and effect */
+  z-index: -1;
+}
+
+.product-card:hover::before {
+  height: 100%;
+}
+
+.product-image {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.product-details {
+  margin-top: 10px;
+}
+
+.product-name {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 10px;
+  color: #ff4d4d;
+}
+.product-price-tag {
+  font-size: 14px;
+  font-weight: bold;
+  margin-bottom: 10px;
+  color: #ff4d4d;
+}
+
+.product-description {
+  font-size: 14px;
+  margin-bottom: 5px;
+  color: black;
+}
+
+.product-price,
+.product-category,
+.product-quantity,
+.product-vendor {
+  font-size: 14px;
+  margin-bottom: 5px;
+  color: black;
+}
+
+.delete-btn {
+  background-color: #ff4d4d;
+  border: none;
+  color: white;
+  padding: 10px;
+  border-radius: 4px;
+  cursor: pointer;
+  width: 230px;
+}
+
+.delete-btn:hover {
+  background-color: #e60000;
+}
+
+/* CSS for low stock (red color) */
+.low-stock {
+  color: red;
+  font-weight: bold;
+}
+
+/* CSS for adequate stock (green color) */
+.in-stock {
+  color: green;
+  font-weight: bold;
+}
+
+.button-group {
+  display: inline-block;
+  text-align: center;
+  padding: 10px;
+}
+
+.button-group .btn {
+  display: inline-block;
+  margin-right: 10px; /* Adds space between the buttons */
+}
