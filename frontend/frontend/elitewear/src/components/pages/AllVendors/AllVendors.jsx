@@ -33,9 +33,7 @@ function AllVendors() {
       <div className="all-vendors-container">
         <div className="vendor-list-header">
           <h1 className="vendor-list-title">Vendor List</h1>
-          <button className="btn-add-vendor" onClick={handleAddVendor}>
-            Add Vendor
-          </button>
+          <button className="btn-add-vendor" onClick={handleAddVendor}> Add Vendor</button>
         </div>
         <table className="vendor-list-table">
           <thead >

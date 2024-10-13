@@ -25,7 +25,7 @@ namespace EliteWear.Services
             _context = context;
         }
 
-        public async Task<bool> RegisterVendor(string username, string email, string password)
+        public async Task<bool> RegisterVendor(string username, string email, string password, int NIC, DateTime Birthday)
         {
             var existingVendor = await _context.Vendor.Find(u => u.Username == username).FirstOrDefaultAsync();
             if (existingVendor != null)
@@ -36,7 +36,9 @@ namespace EliteWear.Services
                 VendorId = await GetNextOrderIdAsync(),
                 Username = username,
                 Email = email,
-                PasswordHash = HashPassword(password)
+                PasswordHash = HashPassword(password),
+                NIC = NIC,
+                Birthday = Birthday,
             };
 
             await _context.Vendor.InsertOneAsync(vendor);
@@ -86,6 +88,8 @@ namespace EliteWear.Services
             var update = Builders<Vendor>.Update
                 .Set(v => v.Email, updatedVendor.Email)
                 .Set(v => v.Username, updatedVendor.Username)
+                .Set(v => v.NIC, updatedVendor.NIC)
+                .Set(v => v.Birthday, updatedVendor.Birthday)
                 // ... other updates as needed (exclude passwordHash if not changed)
                 ;
 

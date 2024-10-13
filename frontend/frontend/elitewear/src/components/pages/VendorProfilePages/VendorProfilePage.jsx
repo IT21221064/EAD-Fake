@@ -28,11 +28,17 @@ const VendorProfile = () => {
     }
   }, [user]);
 
+  const formatDate = (dateString) => {
+    const date = new Date(dateString);
+    return date.toLocaleDateString(); // Displays in local date format (e.g., MM/DD/YYYY or DD/MM/YYYY)
+  };
+
   return (
     <>
     <div>
     <VendorNavBar/>
     <div className="vendor-profile-container">
+    <div className="vendor-profile-inner-container">
       <div className="vendor-profile-header">
         <h1 className="vendor-profile-title">
           HELLO {User?.username ?? "null"}!
@@ -47,8 +53,16 @@ const VendorProfile = () => {
           <strong>Name:</strong> <span>{User?.username ?? "null"}</span>
       </h5>
 
-      <p className="vendor-profile-info">
+      <p className="vendor-profile-info" >
          <strong>Email:</strong> <span>{User?.email ?? "null"}</span>
+      </p>
+
+      <p className="vendor-profile-info" style={{ marginTop: '11px'}}>
+         <strong>NIC:</strong> <span>{User?.nic ?? "null"}</span>
+      </p>
+
+      <p className="vendor-profile-info" style={{ marginTop: '11px'}}>
+      <strong>Birthday:</strong> <span>{User?.birthday ? formatDate(User.birthday) : "null"}</span>
       </p>
 
       </div>
@@ -67,7 +81,7 @@ const VendorProfile = () => {
       <br/>  <br/>  <br/> 
      
     </div>
-   
+    </div>
     </>
   );
 };

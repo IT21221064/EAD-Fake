@@ -4,14 +4,15 @@
 .register-vendor-page {
   background-color: #e4f9f6; /* Light background color */
   margin-bottom: 100px;
-  height: 100vh;
+  height: 200vh;
 }
 .register-vendor-container {
   
   max-width: 600px; /* Set max width for the form */
   margin: 0 auto; /* Center the form */
   padding: 50px; /* Add padding */
-  margin-top: 100px;
+  margin-top: 90px;
+  margin-bottom: 90px;
   background-color: #d0d6fb; /* Light background color */
   font-family: "Afacad Flux", sans-serif;
   border-radius: 8px; /* Rounded corners */

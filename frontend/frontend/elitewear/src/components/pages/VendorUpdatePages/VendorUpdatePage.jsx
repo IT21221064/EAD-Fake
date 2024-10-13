@@ -3,16 +3,20 @@ import { useAuthContext } from "../../../hooks/useAutContext";
 import "./VendorUpdatePage.css";
 import VendorNavBar from "../../common/vendorNavBar/VendorNavBar";
 import Footer from "../../common/footer/Footer";
+import { Navigate } from "react-router-dom";
 
 const UpdateVendorProfile = () => {
   const [email, setEmail] = useState(null);
   const [username, setUsername] = useState(null);
   const [id, setId] = useState(null);
+  const [NIC, setNIC] = useState(null);
+  const [birthday, setBirthday] = useState(null);
   const [vendorId, setVendorId] = useState(null);
   const [password, setPassword] = useState(null);
   const [emptyFields, setEmptyFields] = useState([]);
   const [error, setError] = useState(null);
   const { user } = useAuthContext();
+  const { navigate } = Navigate();
 
   useEffect(() => {
     const fetchProfile = async () => {
@@ -33,6 +37,8 @@ const UpdateVendorProfile = () => {
         setPassword(json.passwordHash);
         setId(json.id);
         setEmail(json.email);
+        setBirthday(json.birthday);
+        setNIC(json.nic);
         setUsername(json.username);
       }
     };
@@ -55,6 +61,8 @@ const UpdateVendorProfile = () => {
             email,
             username,
             password,
+            NIC,
+            birthday,
           }),
         }
       );
@@ -62,7 +70,8 @@ const UpdateVendorProfile = () => {
       if (response.ok) {
         setError(null);
         setEmptyFields([]);
-        console.log("Update successful!");
+        alert("Update successful!");
+        navigate("/vendor-profile"); 
       } else {
         const json = await response.json();
         setError(json.error);
@@ -96,13 +105,39 @@ const UpdateVendorProfile = () => {
             Email
           </label>
           <input
-            type="text"
+            type="email"
             id="email"
             className={`update-vendor-input ${
               emptyFields.includes("email") ? "error" : ""
             }`}
             onChange={(e) => setEmail(e.target.value)}
             value={email || ""}
+          />
+
+          <label htmlFor="nic" className="update-vendor-label">
+            NIC
+          </label>
+          <input
+            type="text"
+            id="NIC"
+            className={`update-vendor-input ${
+              emptyFields.includes("NIC") ? "error" : ""
+            }`}
+            onChange={(e) => setNIC(e.target.value)}
+            value={NIC || ""}
+          />
+
+          <label htmlFor="birthday" className="update-vendor-label">
+            Birthday
+          </label>
+          <input
+            type="date"
+            id="birthday"
+            className={`update-vendor-input ${
+              emptyFields.includes("birthday") ? "error" : ""
+            }`}
+            onChange={(e) => setBirthday(e.target.value)}
+            value={birthday || ""}
           />
 
           <button className="update-vendor-submit-btn" type="submit">

@@ -19,5 +19,10 @@ namespace EliteWear.Models
         public string? Username { get; set; }
         public string? PasswordHash { get; set; }
 
+        public int NIC { get; set; }
+
+        public DateTime Birthday { get; set; }
+
+
     }
 }
