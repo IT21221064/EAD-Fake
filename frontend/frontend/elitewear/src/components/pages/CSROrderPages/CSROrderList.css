@@ -1,15 +1,28 @@
 /* Container for the order list */
 .csr-order-container {
+  background-image: url('../../../assets/flat-design-with-headphones-and-laptop-illustration-ai-generative-free-photo.jpg'); /* Update with the correct path */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
   padding: 30px;
-  padding-left: 150px;
-  padding-right: 150px;
-  max-width: 90%;
-  margin: 40px auto;
-  background-color: #ffffff;
-  border-radius: 10px;
+  padding-left: 80px;
+  padding-right: 80px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  font-family: "Afacad Flux", sans-serif;
 }
 
+.csr-order-inner-container{
+
+  max-width: 90%;
+  margin: 40px auto;
+  background-color: #d0d6fb;
+  padding-left: 60px;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  padding-right: 60px;
+  border-radius: 15px;
+
+}
 /* Title styling */
 .csr-order-title {
   text-align: center;
@@ -53,7 +66,7 @@
 }
 
 .csr-order-table th {
-  background-color: #0056b3; /* Darker blue for a more professional feel */
+  background-color: #002a56; /* Darker blue for a more professional feel */
   color: white;
   font-weight: 700;
   font-size: 16px;

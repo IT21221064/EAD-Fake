@@ -47,10 +47,11 @@ const RegisterVendor = () => {
   };
 
   return (
-    <div>
+    <div className="register-vendor-page">
       <AdminNavBar/>
+    
     <div className="register-vendor-container">
-      <h2 className="register-vendor-title">Create Profile</h2>
+      <h2 className="register-vendor-title">Register Vendor</h2>
       <form className="register-vendor-form" onSubmit={handleSubmit}>
         <div className="register-vendor-input-group">
           <label className="register-vendor-label">Username</label>
@@ -91,6 +92,7 @@ const RegisterVendor = () => {
       </form>
     </div>
     </div>
+    
   );
 };
 

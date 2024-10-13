@@ -125,6 +125,7 @@ const CSROrderList = () => {
       {userRole === "admin0000" && <AdminNavBar />}
       {userRole === "csr" && <CSRNavBar />}
       <div className="csr-order-container">
+        <div className="csr-order-inner-container">
         <h2 className="csr-order-title">Order List</h2>
 
         {/* Search and Filter section */}
@@ -214,6 +215,7 @@ const CSROrderList = () => {
             </tbody>
           </table>
         )}
+      </div>
       </div>
       <Footer />
     </div>

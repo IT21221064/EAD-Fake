@@ -5,24 +5,27 @@
   align-items: center;
   height: 100vh;
   background-color: #f0f2f5;
+  background-image: url('../../../assets/COMPUTER-accessories.jpg'); /* Update with the correct path */
+ 
 }
 
 /* Styling for the login form */
 .csr-login-form {
-  background-color: #fff;
+  background-color: #d0d6fb;
   padding: 40px;
   border-radius: 8px;
   box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+  font-family: "Afacad Flux", sans-serif;
   width: 100%;
-  max-width: 400px;
+  max-width: 500px;
 }
 
 /* Form title styling */
 .csr-login-title {
   margin-bottom: 20px;
-  font-size: 24px;
+  font-size: 30px;
   font-weight: 600;
-  color: #333;
+  color: #002a56;
   text-align: center;
 }
 
@@ -32,12 +35,12 @@
 }
 
 /* Styling for form labels */
-.form-label {
+.csr-form-label {
   display: block;
   margin-bottom: 8px;
-  font-size: 14px;
+  font-size: 16px;
   font-weight: 500;
-  color: #555;
+  color: #002a56;
 }
 
 /* Styling for input fields */
@@ -46,9 +49,17 @@
   padding: 12px;
   font-size: 16px;
   border: 1px solid #ccc;
-  border-radius: 4px;
+  border-radius: 10px;
   transition: border-color 0.3s ease;
 }
+
+/* Add this to your VendorLogin.css */
+.password-toggle-button {
+  background: transparent; /* No background */
+  border: none; /* Remove border */
+  cursor: pointer; /* Pointer cursor */
+}
+
 
 .form-input:focus {
   border-color: #007bff;
@@ -59,10 +70,10 @@
 .btn-submit {
   width: 100%;
   padding: 12px;
-  background-color: #007bff;
+  background-color: #002a56;
   color: white;
   border: none;
-  border-radius: 4px;
+  border-radius: 10px;
   font-size: 16px;
   font-weight: 600;
   cursor: pointer;

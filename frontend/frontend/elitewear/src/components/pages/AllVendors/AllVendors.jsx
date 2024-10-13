@@ -33,7 +33,6 @@ function AllVendors() {
       <div className="all-vendors-container">
         <div className="vendor-list-header">
           <h1 className="vendor-list-title">Vendor List</h1>
-          {/* Add Vendor Button */}
           <button className="btn-add-vendor" onClick={handleAddVendor}>
             Add Vendor
           </button>

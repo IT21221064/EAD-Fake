@@ -35,11 +35,10 @@ html, body {
     width: 100%;
 }
 
-
-
 /* Logo styling */
 .landing-logo {
-    margin-top: -150px; 
+    margin-top: -190px; 
+    margin-bottom: -90px;
     position: relative; 
     z-index: 3; /* Ensure the logo is above the background */
 }
@@ -48,6 +47,7 @@ html, body {
 .welcome-content, .welcome-subtitle-container, .welcome-buttons {
     position: relative; /* Keep content over the background and overlay */
     z-index: 2; /* Ensure it's above the overlay */
+    font-family: "Afacad Flux", sans-serif;
 }
 
 .welcome-content {
@@ -59,8 +59,17 @@ html, body {
     font-size: 36px;
     font-weight: bold;
     color: #fff;
-    font-family: 'Poppins', sans-serif;
     margin-bottom: 10px;
+}
+
+.welcome-title::after {
+    content: '';
+    display: inline-block;
+    width: 2px; /* Width of the cursor */
+    height: 24px; /* Height of the cursor */
+    background-color: #fff; /* Cursor color */
+    animation: blink 0.7s infinite; /* Blinking effect */
+    margin-left: 5px; /* Space between text and cursor */
 }
 
 .welcome-subtitle-container {
@@ -71,7 +80,6 @@ html, body {
 .welcome-subtitle {
     font-size: 24px;
     color: #fff;
-    font-family: 'Poppins', sans-serif;
 }
 
 /* Buttons container */
@@ -79,36 +87,165 @@ html, body {
     display: flex;
     flex-direction: column; /* Places buttons in separate lines */
     gap: 20px; /* Space between buttons */
+    margin-top: 10px;
 }
 
 /* Button styling */
-.welcome-btn-login {
+.admin-btn-login {
+    display: flex; /* Allows for easier centering of content */
+    justify-content: center; /* Centers text horizontally */
+    align-items: center;
+    position: relative; /* Position relative for pseudo-element */
+    overflow: hidden; /* Hide the overflowing gradient */
     padding: 15px 30px;
     font-size: 20px;
-    font-family: 'Poppins', sans-serif;
     font-weight: bold;
+    height: 50px;
     cursor: pointer;
     border: none;
     border-radius: 10px; /* Increased border radius for a softer look */
-    background: linear-gradient(45deg, #4d6a7c, #435d6e); /* Gradient background */
+    background: linear-gradient(45deg, #4d6a7c, #435d6e); /* Initial gradient background */
     color: #fffcfc;
-    transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.2s ease;
+    transition: color 0.3s ease; /* Color transition */
     width: 400px; /* Set a fixed width for buttons */
     text-align: center;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Added shadow for a lifted effect */
 }
 
+/* Pseudo-element for the hover effect */
+.admin-btn-login::before {
+    content: 'Admin Login >>'; /* Necessary for pseudo-element */
+    display: flex; /* Allows for easier centering of content */
+    justify-content: center; /* Centers text horizontally */
+    align-items: center;
+    position: absolute;
+    top: 0;
+    left: -100%; /* Start from the left */
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    background: linear-gradient(45deg, #01385d, #1f639e); /* Gradient for hover */
+    transition: left 0.5s ease; /* Transition for moving effect */
+    z-index: 1; /* Behind the text */
+}
+
 /* Hover effect for all buttons */
-.welcome-btn-login:hover {
-    background: linear-gradient(45deg, #2980b9, #1f639e); /* Darker gradient on hover */
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.4); /* Deeper shadow on hover */
-    animation: pulse 0.5s ease-in-out; /* Pulsing effect on hover */
+.admin-btn-login:hover::before {
+    left: 0; /* Move to the right */
+}
+
+.admin-btn-login:hover {
+    color: #fffcfc; /* Text color change on hover */
 }
 
 /* Focus style */
-.welcome-btn-login:focus {
+.admin-btn-login:focus {
     outline: 3px solid #e63946; /* Outline color for focus state */
 }
+
+.csr-btn-login {
+    display: flex; /* Allows for easier centering of content */
+    justify-content: center; /* Centers text horizontally */
+    align-items: center;
+    position: relative; /* Position relative for pseudo-element */
+    overflow: hidden; /* Hide the overflowing gradient */
+    padding: 15px 30px;
+    font-size: 20px;
+    font-weight: bold;
+    height: 50px;
+    cursor: pointer;
+    border: none;
+    border-radius: 10px; /* Increased border radius for a softer look */
+    background: linear-gradient(45deg, #4d6a7c, #435d6e); /* Initial gradient background */
+    color: #fffcfc;
+    transition: color 0.3s ease; /* Color transition */
+    width: 400px; /* Set a fixed width for buttons */
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Added shadow for a lifted effect */
+}
+
+/* Pseudo-element for the hover effect */
+.csr-btn-login::before {
+    content: 'CSR Login >>'; /* Necessary for pseudo-element */
+    display: flex; /* Allows for easier centering of content */
+    justify-content: center; /* Centers text horizontally */
+    align-items: center;
+    position: absolute;
+    top: 0;
+    left: -100%; /* Start from the left */
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    background: linear-gradient(45deg, #01385d, #1f639e); /* Gradient for hover */
+    transition: left 0.5s ease; /* Transition for moving effect */
+    z-index: 1; /* Behind the text */
+}
+
+/* Hover effect for all buttons */
+.csr-btn-login:hover::before {
+    left: 0; /* Move to the right */
+}
+
+.csr-btn-login:hover {
+    color: #fffcfc; /* Text color change on hover */
+}
+
+/* Focus style */
+.csr-btn-login:focus {
+    outline: 3px solid #e63946; /* Outline color for focus state */
+}
+
+
+.vendor-btn-login {
+    display: flex; /* Allows for easier centering of content */
+    justify-content: center; /* Centers text horizontally */
+    align-items: center;
+    position: relative; /* Position relative for pseudo-element */
+    overflow: hidden; /* Hide the overflowing gradient */
+    padding: 15px 30px;
+    font-size: 20px;
+    font-weight: bold;
+    height: 50px;
+    cursor: pointer;
+    border: none;
+    border-radius: 10px; /* Increased border radius for a softer look */
+    background: linear-gradient(45deg, #4d6a7c, #435d6e); /* Initial gradient background */
+    color: #fffcfc;
+    transition: color 0.3s ease; /* Color transition */
+    width: 400px; /* Set a fixed width for buttons */
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Added shadow for a lifted effect */
+}
+
+/* Pseudo-element for the hover effect */
+.vendor-btn-login::before {
+    content: 'Vendor Login >>'; /* Necessary for pseudo-element */
+    display: flex; /* Allows for easier centering of content */
+    justify-content: center; /* Centers text horizontally */
+    align-items: center;
+    position: absolute;
+    top: 0;
+    left: -100%; /* Start from the left */
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    background: linear-gradient(45deg, #01385d, #1f639e); /* Gradient for hover */
+    transition: left 0.5s ease; /* Transition for moving effect */
+    z-index: 1; /* Behind the text */
+}
+
+/* Hover effect for all buttons */
+.vendor-btn-login:hover::before {
+    left: 0; /* Move to the right */
+}
+
+.vendor-btn-login:hover {
+    color: #fffcfc; /* Text color change on hover */
+}
+
+/* Focus style */
+.vendor-btn-login:focus {
+    outline: 3px solid #e63946; /* Outline color for focus state */
+}
+
+
 
 /* Responsive Design */
 @media (max-width: 768px) {
@@ -124,10 +261,13 @@ html, body {
     .welcome-subtitle {
         font-size: 18px;
     }
+}
 
-    .welcome-btn-login {
-        padding: 10px 20px;
-        font-size: 14px;
-        width: 100%; /* Full width on smaller screens */
+@keyframes blink {
+    0%, 100% {
+        opacity: 1; /* Fully visible */
+    }
+    50% {
+        opacity: 0; /* Fully hidden */
     }
 }

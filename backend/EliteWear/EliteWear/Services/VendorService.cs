@@ -80,7 +80,16 @@ namespace EliteWear.Services
 
         public async Task UpdateVendorAsync(string id, Vendor updatedVendor)
         {
-            await _context.Vendor.ReplaceOneAsync(vendor => vendor.Id == id, updatedVendor);
+            //await _context.Vendor.ReplaceOneAsync(vendor => vendor.Id == id, updatedVendor);
+
+            var filter = Builders<Vendor>.Filter.Eq(v => v.Id, id);
+            var update = Builders<Vendor>.Update
+                .Set(v => v.Email, updatedVendor.Email)
+                .Set(v => v.Username, updatedVendor.Username)
+                // ... other updates as needed (exclude passwordHash if not changed)
+                ;
+
+            await _context.Vendor.UpdateOneAsync(filter, update);
         }
 
         public async Task DeleteVendorAsync(string id)

@@ -56,9 +56,9 @@
     color: #fff; /* Text is white by default */
     background-color: transparent; /* No background */
     border: none; /* No border */
-    font-size: 16px;
+    font-size: 19px;
     cursor: pointer;
-    font-family: 'Poppins', sans-serif;
+    font-family: "Afacad Flux", sans-serif;
     font-weight: bold; /* Bold text by default */
     position: relative; /* Needed for underline effect */
     transition: color 0.3s ease-in-out;
@@ -72,7 +72,7 @@
     height: 2px;
     bottom: -2px;
     left: 0;
-    background-color: #fafcfc; /* Cyan underline */
+    background-color: #c2ab01; /* Cyan underline */
     transition: width 0.3s ease-in-out; /* Smooth underline effect */
 }
 
