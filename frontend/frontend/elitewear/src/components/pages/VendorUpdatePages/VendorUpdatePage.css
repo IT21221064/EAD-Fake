@@ -1,11 +1,16 @@
 /* Main Container */
 .update-vendor-profile-container {
-  max-width: 600px;
+  max-width: 900px;
   margin: 0 auto;
-  padding: 20px;
-  background-color: #f4f4f9;
+  margin-top: 50px;
+  margin-bottom: 50px;
+  padding-inline: 100px;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  background-color: #d0d6fb;
   border-radius: 8px;
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  font-family: "Afacad Flux", sans-serif;
 }
 
 /* Form Wrapper */
@@ -26,11 +31,19 @@
 .update-vendor-input {
   padding: 10px;
   margin-bottom: 15px;
-  font-size: 16px;
+  font-size: 18px;
   border: 1px solid #ccc;
-  border-radius: 4px;
-  transition: border-color 0.3s ease;
+  border-radius: 10px;
+  transition: border-bottom-color 0.3s ease; /* Smooth transition for underline color */
+
 }
+
+.update-vendor-input:hover {
+  border-bottom-color: #002a56; /* Change color of underline on hover */
+  border-width: 3px;
+}
+
+
 
 .update-vendor-input:focus {
   border-color: #007bff;
@@ -39,7 +52,7 @@
 
 /* Labels */
 .update-vendor-label {
-  font-size: 14px;
+  font-size: 20px;
   margin-bottom: 5px;
   color: #333;
   font-weight: bold;
@@ -48,10 +61,10 @@
 /* Submit Button */
 .update-vendor-submit-btn {
   padding: 10px;
-  background-color: #007bff;
+  background-color: #002a56;
   color: white;
   border: none;
-  border-radius: 4px;
+  border-radius: 10px;
   cursor: pointer;
   font-size: 16px;
   margin-top: 10px;

@@ -1,75 +1,95 @@
 /* Vendor Profile Container */
 .vendor-profile-container {
-  max-width: 600px;
+  max-width: 800px; /* Increased width for more spacious layout */
   margin: 0 auto;
   margin-top: 60px;
-  height: 400px;
-  padding: 20px;
-  background-color: #ffffff; /* Use white for a clean background */
-  border-radius: 8px;
-  box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1); /* Slightly darker shadow for depth */
-  transition: box-shadow 0.3s ease; /* Transition effect for box-shadow */
+  padding: 40px; /* Increased padding for better spacing */
+  background-color: #dadefb;
+  border-radius: 12px; /* Softer rounded corners */
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); /* More defined shadow for professional look */
+  transition: box-shadow 0.3s ease;
 }
 
 /* Hover effect for container */
 .vendor-profile-container:hover {
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2); /* Darker shadow on hover */
+  box-shadow: 0 6px 25px rgba(0, 0, 0, 0.15); /* Slightly larger shadow on hover */
 }
 
 /* Header Styling */
 .vendor-profile-header {
   text-align: center;
-  margin-bottom: 30px;
+  margin-bottom: 40px; /* Increased margin for breathing room */
 }
 
 .vendor-profile-title {
-  font-size: 28px; /* Increased font size */
-  font-weight: 600; /* Bold weight */
-  color: #333;
-  margin-bottom: 5px; /* Space below title */
+  font-size: 50px; /* Larger and bolder title */
+  font-weight: 700;
+  color: #1f2937; /* Darker, modern grey */
+  margin-bottom: 10px; /* Space below title */
+  font-family: "Afacad Flux", sans-serif;
 }
 
 .vendor-profile-subtitle {
-  font-size: 18px; /* Reduced size for subtitle */
-  color: #666; /* Softer color for subtitle */
+  font-size: 22px; /* Slightly larger subtitle */
+  color: #6b7280; /* Soft grey for subtitle */
+  font-family: "Afacad Flux", sans-serif;
+
 }
 
 /* Profile Details Styling */
 .vendor-profile-details {
-  background-color: #f0f4f8; /* Soft background color */
-  border: 1px solid #ddd;
-  padding: 20px;
-  border-radius: 8px;
-  margin-bottom: 30px;
-  text-align: center;
+  background-color: #f9fafb; /* Lighter, modern background */
+  border: 1px solid #e5e7eb;
+  padding: 30px;
+  border-radius: 10px; /* Softer edges */
+  margin-bottom: 40px;
+  text-align: left; /* Align text to the left for a professional layout */
+  line-height: 1.6; /* Improved readability */
 }
 
 .vendor-profile-info {
-  font-size: 24px; /* Slightly reduced size */
-  color: #444; /* Darker grey for better contrast */
-  margin-bottom: 10px;
+  font-size: 20px;
+  color: #374151;
+  margin-bottom: 15px;
+}
+
+/* Label and value styling */
+.vendor-profile-info strong {
+  color: #002a56; /* Blue accent for labels */
+  font-weight: 600;
+  font-size: 23px;
+  font-family: "Afacad Flux", sans-serif;
+
+}
+
+.vendor-profile-info span {
+  color: #374151;
+  font-weight: 400; /* Regular weight for values */
+  font-family: "Afacad Flux", sans-serif;
+  
 }
 
 /* Profile Actions - Buttons */
 .vendor-profile-actions {
-  padding-top: 60px;
+  padding-top: 40px;
   text-align: center;
 }
 
 .vendor-profile-btn {
-  background-color: #007bff; /* Primary button color */
+  width: 100%;
+  padding: 12px;
+  background-color: #002a56; /* Same button background color */
   color: white;
   border: none;
-  padding: 12px 24px; /* Increased padding */
-  margin: 10px;
-  border-radius: 5px; /* Rounded corners */
-  cursor: pointer;
+  border-radius: 10px;
   font-size: 16px;
-  transition: background-color 0.3s ease, transform 0.2s ease; /* Transition for hover effects */
+  cursor: pointer;
+  margin-top: 15px;
+  transition: background-color 0.3s ease;
 }
 
 .vendor-profile-btn:hover {
-  background-color: #0056b3; /* Darker on hover */
+  background-color: #1d4ed8; /* Darker shade on hover */
   transform: translateY(-2px); /* Lift effect on hover */
 }
 
@@ -81,35 +101,23 @@
 /* Responsive adjustments */
 @media (max-width: 768px) {
   .vendor-profile-container {
-    padding: 15px; /* Slightly less padding for smaller screens */
+    padding: 25px; /* Slightly less padding for smaller screens */
   }
 
   .vendor-profile-title {
-    font-size: 24px; /* Adjust font size for smaller screens */
+    font-size: 28px;
   }
 
   .vendor-profile-subtitle {
-    font-size: 16px; /* Adjust subtitle size */
+    font-size: 18px;
   }
 
   .vendor-profile-btn {
-    width: 100%; /* Full-width buttons on small screens */
-    margin: 5px 0; /* Adjust margin for buttons */
+    width: 100%; /* Full-width buttons for smaller screens */
+    margin: 8px 0;
   }
 
   .vendor-profile-info {
-    font-size: 18px; /* Adjust the font size if needed */
-    color: #333; /* Ensure the text color is consistent */
+    font-size: 18px;
   }
-  
-  .vendor-profile-info strong {
-    font-weight: bold; /* Ensure the label is bold */
-    color: #007bff; /* Optional: Set a different color for the label */
-  }
-  
-  .vendor-profile-info span {
-    font-weight: normal; /* Ensure the value is not bold */
-    color: #444; /* Optional: Set a color for the value */
-  }
-  
 }

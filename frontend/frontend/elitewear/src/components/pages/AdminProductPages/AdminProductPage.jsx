@@ -156,6 +156,7 @@ const AdminProductPage = () => {
     className="btn btn-success activate-btn"
     onClick={() => handleActivate(product.id)}
     disabled={product.status === "Active"}
+    style={{ width: "220px" }} // Inline style for width
   >
     {product.status === "Active" ? "Activated" : "Activate"}
   </button>

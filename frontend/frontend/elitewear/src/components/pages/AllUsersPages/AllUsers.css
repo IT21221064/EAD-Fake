@@ -1,18 +1,32 @@
+
 .all-users-container {
+  background-image: url('../../../assets/flat-design-with-headphones-and-laptop-illustration-ai-generative-free-photo.jpg'); /* Update with the correct path */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
   padding: 30px;
-  padding-left: 150px;
-  padding-right: 150px;
+  padding-left: 50px;
+  padding-right: 50px;
+  font-family: "Afacad Flux", sans-serif;
+
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.users-container{
   max-width: 90%;
   margin: 40px auto;
-  background-color: #ffffff;
-  border-radius: 10px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  background-color: #d0d6fb;
+  padding-left: 90px;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  padding-right: 90px;
+  border-radius: 15px;
 }
 
 .user-list-title {
   text-align: center;
   margin-bottom: 50px;
-  font-size: 28px;
+  font-size: 35px;
   font-weight: 600;
   color: #333;
 }
@@ -21,19 +35,23 @@
   width: 100%;
   border-collapse: collapse;
   text-align: left;
+ 
 }
 
 .user-list-table th, .user-list-table td {
   padding: 12px 15px;
   border: 1px solid #ddd;
-  font-size: 16px;
+  font-size: 18px;
+  border-radius: 7px;
+  
 }
 
 .user-list-table th {
-  background-color: #0056b3; /* Darker blue for a more professional feel */
+  background-color: #002a56; /* Darker blue for a more professional feel */
+  text-align: center;
   color: white;
   font-weight: 700;
-  font-size: 16px;
+  font-size: 20px;
 }
 
 .user-item {
@@ -62,7 +80,7 @@
 
 .activate-button, .reactivate-button {
   padding: 10px 15px;
-  font-size: 14px;
+  font-size: 18px;
   color: #fff;
   background-color: #3498db;
   border: none;

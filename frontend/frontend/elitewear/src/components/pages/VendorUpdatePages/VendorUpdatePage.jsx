@@ -1,11 +1,14 @@
 import { useEffect, useState } from "react";
 import { useAuthContext } from "../../../hooks/useAutContext";
 import "./VendorUpdatePage.css";
+import VendorNavBar from "../../common/vendorNavBar/VendorNavBar";
+import Footer from "../../common/footer/Footer";
 
 const UpdateVendorProfile = () => {
   const [email, setEmail] = useState(null);
   const [username, setUsername] = useState(null);
   const [id, setId] = useState(null);
+  const [vendorId, setVendorId] = useState(null);
   const [password, setPassword] = useState(null);
   const [emptyFields, setEmptyFields] = useState([]);
   const [error, setError] = useState(null);
@@ -13,13 +16,20 @@ const UpdateVendorProfile = () => {
 
   useEffect(() => {
     const fetchProfile = async () => {
+
+      const currentUser = JSON.parse(localStorage.getItem("user"));
+      const currentVendorId = currentUser?.vendor?.id;
+      console.log(currentVendorId);
+      
+
       const response = await fetch(
-        `http://localhost:5133/api/vendor/${user.vendor.id}`
+        `http://localhost:5133/api/vendor/${currentVendorId}`
       );
       const json = await response.json();
       console.log(json);
 
       if (response.ok) {
+        setVendorId(json.vendorId)
         setPassword(json.passwordHash);
         setId(json.id);
         setEmail(json.email);
@@ -41,6 +51,7 @@ const UpdateVendorProfile = () => {
           },
           body: JSON.stringify({
             id,
+            vendorId,
             email,
             username,
             password,
@@ -63,6 +74,8 @@ const UpdateVendorProfile = () => {
   };
 
   return (
+    <div>
+      <VendorNavBar/>
     <div className="update-vendor-profile-container">
       <div className="update-vendor-profile-form-wrapper">
         <form onSubmit={handleUpdate} className="update-vendor-profile-form">
@@ -99,6 +112,9 @@ const UpdateVendorProfile = () => {
           {error && <div className="update-vendor-error-msg">{error}</div>}
         </form>
       </div>
+    </div>
+    
+
     </div>
   );
 };

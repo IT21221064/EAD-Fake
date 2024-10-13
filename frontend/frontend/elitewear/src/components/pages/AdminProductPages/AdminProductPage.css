@@ -1,7 +1,7 @@
 .admin-product-page {
   border: 1px solid #ccc;
   padding: 16px;
-  background-color: #fff;
+  background-color: #fafafa;
   margin: 5px;
 }
 
@@ -17,6 +17,7 @@
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
   gap: 20px;
+
 }
 
 .product-card {
@@ -43,7 +44,7 @@
   width: 100%;
   background: linear-gradient(
     to bottom,
-    #f25c1c,
+    #7ba0d1,
     transparent
   ); /* From yellow to transparent */
   transition: height 0.5s ease-in-out; /* Animation duration and effect */
@@ -69,13 +70,13 @@
   font-size: 18px;
   font-weight: bold;
   margin-bottom: 10px;
-  color: #ff4d4d;
+  color: #002a56;
 }
 .product-price-tag {
   font-size: 14px;
   font-weight: bold;
   margin-bottom: 10px;
-  color: #ff4d4d;
+  color: #002a56;
 }
 
 .product-description {

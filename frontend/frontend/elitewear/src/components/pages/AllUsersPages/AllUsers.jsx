@@ -48,12 +48,14 @@ function AllUsers() {
   };
 
   return (
+    
     <div>
       {userRole === "admin0000" && <AdminNavBar />}
       {userRole === "csr" && <CSRNavBar />}
       <div className="all-users-container">
-        <h1 className="user-list-title">User List</h1>
-        <table className="user-list-table">
+        <div className="users-container">
+          <h1 className="user-list-title">User List</h1>
+          <table className="user-list-table">
           <thead>
             <tr>
               <th>Username</th>
@@ -103,10 +105,12 @@ function AllUsers() {
               </tr>
             ))}
           </tbody>
-        </table>
+          </table>
+        </div>
       </div>
       <Footer />
     </div>
+    
   );
 }
 
