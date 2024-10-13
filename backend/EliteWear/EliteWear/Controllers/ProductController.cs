@@ -41,10 +41,6 @@ public class ProductController : ControllerBase
     {
         // Check if a product with the given Id already exists
         var existingProduct = await _productService.GetProductByIdAsync(product.Id);
-        if (existingProduct != null)
-        {
-            return BadRequest("A product with this Id already exists.");
-        }
 
         // Check if the product contains an image URL
         if (string.IsNullOrEmpty(product.ImageUrl))

@@ -19,10 +19,7 @@
   padding-bottom: 30px;
   padding-right: 90px;
   border-radius: 15px;
-  margin: 0 auto; /* Centers the content horizontally */
   font-family: "Afacad Flux", sans-serif;
-  padding: 80px;  /* Adds padding around the content */
-  background-color: #dadefb; /* Light background color */
   border-radius: 8px; /* Rounded corners */
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
 }
@@ -52,7 +49,6 @@
   border-radius: 4px; /* Slightly rounded corners */
   cursor: pointer; /* Changes cursor to pointer on hover */
   transition: background-color 0.3s ease; /* Smooth transition on hover */
-  margin-left:1240px;
 }
 
 /* Hover effect for the add vendor button */
@@ -64,7 +60,7 @@
 /* Vendor list table styles */
 .vendor-list-table {
   width: 100%; /* Full width of the container */
-  
+
   margin-top: 20px; /* Adds space above the table */
   table-layout: fixed; /* Prevents columns from resizing automatically */
 }
