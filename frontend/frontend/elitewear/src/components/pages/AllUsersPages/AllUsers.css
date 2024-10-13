@@ -92,3 +92,97 @@
 .activate-button:hover, .reactivate-button:hover {
   background-color: #2980b9;
 }
+
+.user-search-filter-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+  padding: 10px 0;
+  border-bottom: 2px solid #ddd;
+}
+
+/* Search bar styling */
+.user-search-bar {
+  width: 60%;
+  position: relative;
+}
+
+.user-search-bar input {
+  width: 100%;
+  padding: 10px 15px;
+  border-radius: 30px;
+  border: 1px solid #bbb;
+  font-size: 16px;
+  color: #333;
+  box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+}
+
+.user-search-bar input:focus {
+  border-color: #007bff;
+  outline: none;
+  box-shadow: 0 0 10px rgba(0, 123, 255, 0.2);
+}
+
+.user-search-bar button {
+  position: absolute;
+  right: 15px;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: transparent;
+  border: none;
+  font-size: 18px;
+  color: #555;
+  cursor: pointer;
+  padding: 0;
+}
+
+.user-search-bar button:hover {
+  color: #007bff;
+}
+
+/* Category dropdown styling */
+.user-status-dropdown {
+  width: 35%;
+  padding: 10px 15px;
+  border-radius: 30px;
+  border: 1px solid #bbb;
+  font-size: 16px;
+  color: #333;
+  transition: all 0.3s ease;
+}
+
+.user-status-dropdown:focus {
+  border-color: #007bff;
+  outline: none;
+  box-shadow: 0 0 10px rgba(0, 123, 255, 0.2);
+}
+
+.user-status-dropdown option {
+  font-size: 16px;
+  padding: 10px;
+}
+
+/* Add a hover effect to both input and dropdown */
+.user-search-bar input:hover,
+.user-status-dropdown:hover {
+  border-color: #0056b3;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .search-filter-container {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .search-bar {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+
+  .category-dropdown {
+    width: 100%;
+  }
+}

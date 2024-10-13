@@ -32,18 +32,25 @@ function AllVendors() {
       <AdminNavBar />
       <div className="all-vendors-container">
         <div className="vendor-container">
-          <div className="vendor-list-header">
-            <h1 className="vendor-list-title">Vendor List</h1>
-            <button className="btn-add-vendor" onClick={handleAddVendor}>
-              Add Vendor
-            </button>
-          </div>
-          <table className="vendor-list-table">
-            <thead>
-              <tr>
-                <th className="vendor-list-header">Vendor ID</th>
-                <th className="vendor-list-header">Email</th>
-                <th className="vendor-list-header">Username</th>
+        <div className="vendor-list-header">
+          <h1 className="vendor-list-title">Vendor List</h1>
+          <button className="btn-add-vendor" onClick={handleAddVendor}> Add Vendor</button>
+        </div>
+        <table className="vendor-list-table">
+          <thead >
+            <tr>
+              <th className="vendor-list-header">Vendor ID</th>
+              <th className="vendor-list-header">Email</th>
+              <th className="vendor-list-header">Username</th>
+            </tr>
+          </thead>
+          <tbody>
+            {vendors.map((vendor) => (
+              <tr key={vendor.id} className="vendor-item-row">
+                <td>{vendor.vendorId}</td>
+                <td>{vendor.email}</td>
+                <td>{vendor.username}</td>
+
               </tr>
             </thead>
             <tbody>

@@ -1,17 +1,22 @@
+
+
+
+
 /* Vendor Profile Container */
-.vendor-profile-container {
+.vendor-profile-inner-container {
   max-width: 800px; /* Increased width for more spacious layout */
   margin: 0 auto;
   margin-top: 60px;
   padding: 40px; /* Increased padding for better spacing */
-  background-color: #dadefb;
+  background-color: #e0e3f8;
   border-radius: 12px; /* Softer rounded corners */
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); /* More defined shadow for professional look */
   transition: box-shadow 0.3s ease;
+  
 }
 
 /* Hover effect for container */
-.vendor-profile-container:hover {
+.vendor-profile-inner-container:hover {
   box-shadow: 0 6px 25px rgba(0, 0, 0, 0.15); /* Slightly larger shadow on hover */
 }
 
@@ -59,6 +64,7 @@
   font-weight: 600;
   font-size: 23px;
   font-family: "Afacad Flux", sans-serif;
+
 
 }
 

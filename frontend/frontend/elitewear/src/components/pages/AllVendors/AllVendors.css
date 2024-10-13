@@ -19,6 +19,12 @@
   padding-bottom: 30px;
   padding-right: 90px;
   border-radius: 15px;
+  margin: 0 auto; /* Centers the content horizontally */
+  font-family: "Afacad Flux", sans-serif;
+  padding: 80px;  /* Adds padding around the content */
+  background-color: #dadefb; /* Light background color */
+  border-radius: 8px; /* Rounded corners */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
 }
 
 /* Header containing title and add vendor button */
@@ -30,6 +36,7 @@
 
 /* Title for the vendor list */
 .vendor-list-title {
+  text-align: center;
   color: #333; /* Dark text color for readability */
   font-size: 26px; /* Larger font size for the title */
   text-align: center;
@@ -45,7 +52,7 @@
   border-radius: 4px; /* Slightly rounded corners */
   cursor: pointer; /* Changes cursor to pointer on hover */
   transition: background-color 0.3s ease; /* Smooth transition on hover */
-  margin-left: auto; /* Pushes the button to the right */
+  margin-left:1240px;
 }
 
 /* Hover effect for the add vendor button */
@@ -57,14 +64,15 @@
 /* Vendor list table styles */
 .vendor-list-table {
   width: 100%; /* Full width of the container */
-
+  
   margin-top: 20px; /* Adds space above the table */
   table-layout: fixed; /* Prevents columns from resizing automatically */
 }
 
 /* Table header styles */
 .vendor-list-table th {
-  background-color: #3498db; /* Blue background */
+  background-color: #002a56; /* Blue background */
+  border-radius: 10px 5px 0 0;
   color: #fff; /* White text */
   text-align: left; /* Left align header text */
   padding: 12px; /* Add padding for readability */
@@ -79,7 +87,8 @@
   text-overflow: ellipsis; /* Add ellipsis for overflowed text */
   overflow: hidden; /* Hide overflowed text */
   white-space: nowrap; /* Prevent text from wrapping */
-  background-color: white;
+  background-color: #f1f1f1;
+  border-radius: 10px 5px 0 0;
 }
 
 /* Hover effect for table rows */
