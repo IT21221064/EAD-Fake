@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
-import SearchAndFilter from "../../common/searchAndFilter/SearchAndFilter";
+import { FaEye } from "react-icons/fa";
 import "./VendorOrderList.css";
 import VendorNavBar from "../../common/vendorNavBar/VendorNavBar";
 import Footer from "../../common/footer/Footer";
@@ -14,12 +14,10 @@ const VendorOrderListPage = () => {
   const [searchQuery, setSearchQuery] = useState("");
   const [selectedCategory, setSelectedCategory] = useState("");
   const [categories, setCategories] = useState([]);
-
-  //const currentUserId = "1234"; // This should ideally come from user authentication context
+  const [selectedOrder, setSelectedOrder] = useState(null); // For modal state
 
   const currentUser = JSON.parse(localStorage.getItem("user"));
   const currentUserId = currentUser?.vendor?.vendorId;
-  console.log("current", currentUserId);
 
   useEffect(() => {
     const fetchOrders = async () => {
@@ -32,8 +30,6 @@ const VendorOrderListPage = () => {
         setCategories(uniqueCategories);
       } catch (err) {
         setError("Failed to fetch orders.");
-      } finally {
-        setLoading(false);
       }
     };
     fetchOrders();
@@ -57,7 +53,9 @@ const VendorOrderListPage = () => {
         }
       }
       setItemUserMap(userMap);
+      setLoading(false); // Set loading to false only after itemUserMap is ready
     };
+
     if (orders.length) {
       fetchItemUserIds();
     }
@@ -67,8 +65,6 @@ const VendorOrderListPage = () => {
     const itemsForCurrentUser = order.items?.filter(
       (item) => itemUserMap[item.id] === parseInt(currentUserId)
     );
-
-    // Filter orders to include only those that have items for the current user
     return itemsForCurrentUser.length > 0;
   });
 
@@ -81,9 +77,7 @@ const VendorOrderListPage = () => {
 
   const updateItemStatus = async (orderId, itemId) => {
     try {
-      const status = selectedStatus[itemId]; // Correctly fetch the new status
-
-      // Check if status is selected before updating
+      const status = selectedStatus[itemId];
       if (!status) {
         alert("Please select a status before updating.");
         return;
@@ -108,6 +102,15 @@ const VendorOrderListPage = () => {
     }
   };
 
+  const openOrderDetails = (order) => {
+    setSelectedOrder(order);
+    console.log(order); // This logs the order details
+  };
+
+  const closeModal = () => {
+    setSelectedOrder(null);
+  };
+
   if (loading) {
     return <div className="vendor-order-loading">Loading...</div>;
   }
@@ -124,7 +127,6 @@ const VendorOrderListPage = () => {
 
         {/* Search and Filter section */}
         <div className="search-filter-container">
-          {/* Search bar */}
           <div className="search-bar">
             <input
               type="text"
@@ -136,8 +138,6 @@ const VendorOrderListPage = () => {
               <i className="fa fa-search"></i>
             </button>
           </div>
-
-          {/* Category dropdown */}
           <select
             className="category-dropdown"
             value={selectedCategory}
@@ -151,6 +151,7 @@ const VendorOrderListPage = () => {
             ))}
           </select>
         </div>
+
         {filteredOrders.length === 0 ? (
           <p className="vendor-order-empty">No orders found for this user.</p>
         ) : (
@@ -162,6 +163,7 @@ const VendorOrderListPage = () => {
                 <th>Items</th>
                 <th>Total Price</th>
                 <th>Status</th>
+                <th>Action</th>
               </tr>
             </thead>
             <tbody>
@@ -208,6 +210,13 @@ const VendorOrderListPage = () => {
                     </td>
                     <td>${order.totalPrice.toFixed(2)}</td>
                     <td>{order.status}</td>
+                    <td>
+                      <FaEye
+                        className="view-details-icon"
+                        onClick={() => openOrderDetails(order)}
+                        style={{ cursor: "pointer" }}
+                      />
+                    </td>
                   </tr>
                 );
               })}
@@ -215,6 +224,32 @@ const VendorOrderListPage = () => {
           </table>
         )}
       </div>
+
+      {/* Modal for viewing order details */}
+      {selectedOrder && (
+        <div className="modal" onClick={closeModal}>
+          <div className="modal-content" onClick={(e) => e.stopPropagation()}>
+            <span className="close" onClick={closeModal}>
+              &times;
+            </span>
+            <h3>Order Details</h3>
+            <p>
+              <strong>Order ID:</strong> {selectedOrder.id}
+            </p>
+            <p>
+              <strong>User ID:</strong> {selectedOrder.userId}
+            </p>
+            <ul>
+              {selectedOrder.items.map((item) => (
+                <li key={item.id}>
+                  {item.name} (Qty: {item.qty}) - {item.status}
+                </li>
+              ))}
+            </ul>
+          </div>
+        </div>
+      )}
+
       <Footer />
     </div>
   );

@@ -26,14 +26,17 @@ function App() {
   return (
     <Router>
       <Routes>
+
       <Route path="/" element={<WelcomePage />} />
         <Route path="/add-product" element={user ? <CreateProduct />: <WelcomePage />} />
         <Route path="/all-vendors" element={user ? <AllVendors />: <WelcomePage />} />
         <Route path="/vendor-products" element={user ?<VendorProducts />: <WelcomePage />} />
+
         <Route path="/vendor-login" element={<VendorLogin />} />
         <Route path="/admin-login" element={<AdminLogin />} />
         <Route path="/admin-products" element={user ?<AdminProductPage />: <WelcomePage />} />
         <Route path="/csr-login" element={<CSRLogin />} />
+
         <Route path="/vendor-profile" element={user ?<VendorProfile />: <WelcomePage />} />
         <Route path="/vendor-register" element={user ?<RegisterVendor />: <WelcomePage />} />
         <Route path="/all-users" element={user ?<AllUsers />: <WelcomePage />} />
@@ -44,6 +47,7 @@ function App() {
         <Route path="/vendor-notifications" element={user ?<VendorNotifications />: <WelcomePage />} />
         <Route path="/csr-orders" element={user ?<CSROrderList />: <WelcomePage />} />
         <Route path="/csr-notifications" element={user ?<CSRNotificationList />: <WelcomePage />} />
+
       </Routes>
     </Router>
   );

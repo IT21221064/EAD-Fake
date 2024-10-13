@@ -6,7 +6,6 @@
   align-items: center;
   padding: 20px;
   background-color: #f9f9f9;
-  height: 100vh;
 }
 
 /* Title styling */
@@ -27,6 +26,13 @@
   max-width: 700px;
 }
 
+/* Grid styling for two columns */
+.form-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* Two equal columns */
+  gap: 20px; /* Space between form groups */
+}
+
 /* Form group styling */
 .form-group {
   margin-bottom: 20px;
@@ -41,7 +47,9 @@
 }
 
 /* Input styling */
-.form-input, .form-select, .form-file-input {
+.form-input,
+.form-select,
+.form-file-input {
   width: 100%;
   padding: 10px;
   border: 1px solid #ccc;
@@ -50,7 +58,8 @@
   transition: border-color 0.3s ease;
 }
 
-.form-input:focus, .form-select:focus {
+.form-input:focus,
+.form-select:focus {
   border-color: #007bff;
   outline: none;
 }
@@ -83,12 +92,18 @@
     padding: 20px;
   }
 
-  .form-input, .form-select, .form-file-input {
+  .form-input,
+  .form-select,
+  .form-file-input {
     font-size: 14px;
   }
 
   .btn-submit {
     padding: 10px;
     font-size: 14px;
+  }
+
+  .form-grid {
+    grid-template-columns: 1fr; /* Stack items on small screens */
   }
 }

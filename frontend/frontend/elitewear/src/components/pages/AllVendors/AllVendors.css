@@ -1,9 +1,27 @@
 /* Container for the vendors list */
 .all-vendors-container {
+  margin: 0 auto;
+  padding: 80px;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  background-image: url("../../../assets/flat-design-with-headphones-and-laptop-illustration-ai-generative-free-photo.jpg"); /* Update with the correct path */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+.vendor-container {
+  max-width: 90%;
+  margin: 40px auto;
+  background-color: #d0d6fb;
+  padding-left: 90px;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  padding-right: 90px;
+  border-radius: 15px;
   margin: 0 auto; /* Centers the content horizontally */
   font-family: "Afacad Flux", sans-serif;
   padding: 80px;  /* Adds padding around the content */
-  
   background-color: #dadefb; /* Light background color */
   border-radius: 8px; /* Rounded corners */
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
@@ -11,7 +29,6 @@
 
 /* Header containing title and add vendor button */
 .vendor-list-header {
-  
   justify-content: space-between; /* Space out the title and button */
   align-items: center; /* Align the title and button vertically */
   margin-bottom: 20px; /* Adds space below the header */
@@ -22,6 +39,7 @@
   text-align: center;
   color: #333; /* Dark text color for readability */
   font-size: 26px; /* Larger font size for the title */
+  text-align: center;
 }
 
 /* Button to add a new vendor */
@@ -75,6 +93,5 @@
 
 /* Hover effect for table rows */
 .vendor-item-row:hover {
-  background-color: #f1f1f1; /* Light gray background on hover */
+  background-color: #979797; /* Light gray background on hover */
 }
-
