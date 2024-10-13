@@ -26,7 +26,7 @@ function App() {
   return (
     <Router>
       <Routes>
-      <Route path="/" element={<WelcomePage />} />
+        <Route path="/" element={<WelcomePage />} />
         <Route path="/add-product" element={<CreateProduct />} />
         <Route path="/all-vendors" element={<AllVendors />} />
         <Route path="/vendor-products" element={<VendorProducts />} />
@@ -38,7 +38,6 @@ function App() {
         <Route path="/vendor-register" element={<RegisterVendor />} />
         <Route path="/all-users" element={<AllUsers />} />
         <Route path="/vendor-update" element={<UpdateVendorProfile />} />
-
         <Route path="/update-product/:id" element={<UpdateProduct />} />
         <Route path="/vendor-orders" element={<VendorOrderListPage />} />
         <Route path="/vendor-notifications" element={<VendorNotifications />} />
