@@ -2,6 +2,7 @@ import React from 'react';
 import { Link, useNavigate } from "react-router-dom";
 import { useLogout } from "../../../hooks/useLogout";
 import "./VendorNavBar.css";
+import { BiStoreAlt,BiUser, BiCollection, BiExit, BiBell } from "react-icons/bi";
 
 const VendorNavBar = () => {
     const navigate = useNavigate(); // Initialize navigate
@@ -19,19 +20,19 @@ const VendorNavBar = () => {
 
             <ul className='vendor-nav-links'>
                 <li>
-                    <button className='vendor-nav-btn' onClick={() => navigate('/vendor-products')}>My Products</button>
+                    <button className='vendor-nav-btn' onClick={() => navigate('/vendor-products')}><BiStoreAlt style={{ fontSize: '24px', marginRight: '8px', marginBottom: '1px' }}/>My Products</button>
                 </li>
                 <li>
-                    <button className='vendor-nav-btn' onClick={() => navigate('/vendor-orders')}>Orders</button>
+                    <button className='vendor-nav-btn' onClick={() => navigate('/vendor-orders')}><BiCollection style={{ fontSize: '24px', marginRight: '8px', marginBottom: '1px' }}/>Orders</button>
                 </li>
                 <li>
-                    <button className='vendor-nav-btn' onClick={() => navigate('/vendor-profile')}>Profile</button>
+                    <button className='vendor-nav-btn' onClick={() => navigate('/vendor-profile')}><BiUser style={{ fontSize: '24px', marginRight: '8px', marginBottom: '1px' }}/>Profile</button>
                 </li>
                 <li>
-                    <button className='vendor-nav-btn' onClick={() => navigate('/vendor-notifications')}>Notifications</button>
+                    <button className='vendor-nav-btn' onClick={() => navigate('/vendor-notifications')}><BiBell style={{ fontSize: '24px', marginRight: '8px', marginBottom: '1px' }}/>Notifications</button>
                 </li>
                 <li>
-                    <button className='vendor-nav-btn csr-logout-btn' onClick={handleLogoutClick}>LOGOUT</button>
+                    <button className='vendor-nav-btn csr-logout-btn' onClick={handleLogoutClick}><BiExit style={{ fontSize: '24px', marginRight: '8px', marginBottom: '1px' }}/>LOGOUT</button>
                 </li>
             </ul>
         </nav>

@@ -8,6 +8,8 @@ const VendorProfile = () => {
   const [User, setUser] = useState(null);
   const { user } = useAuthContext();
 
+
+
   useEffect(() => {
     const fetchProfile = async () => {
       const response = await fetch(
@@ -17,6 +19,7 @@ const VendorProfile = () => {
       const json = await response.json();
 
       if (response.ok) {
+
         setUser(json);
       }
     };
@@ -50,17 +53,19 @@ const VendorProfile = () => {
 
       </div>
 
-      <div className="vendor-profile-actions">
-        <a href="/UpdateProfile">
+      <div className="vendor-update-actions">
+        <a href="/vendor-update">
           <button className="vendor-profile-btn">Edit Profile</button>
         </a>
+      </div>
+      <div className="vendor-review-actions">
         <a href="/userreview">
           <button className="vendor-profile-btn">My Reviews</button>
         </a>
       </div>
       </div>
-      <br/>  <br/>  <br/>  <br/>  <br/>  <br/>  <br/>  <br/>
-      <Footer />
+      <br/>  <br/>  <br/> 
+     
     </div>
    
     </>

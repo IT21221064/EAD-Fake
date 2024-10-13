@@ -13,11 +13,12 @@
 
 /* Form styling */
 .admin-login-form {
-  background-color: #ffffff;
+  background-color: #d0d6fb;
+  font-family: "Afacad Flux", sans-serif;
   padding: 30px;
   border-radius: 8px;
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-  max-width: 400px;
+  max-width: 500px;
   width: 100%;
 }
 
@@ -25,8 +26,8 @@
 .admin-login-title {
   text-align: center;
   margin-bottom: 20px;
-  font-size: 24px;
-  color: #333;
+  font-size: 30px;
+  color: #002a56;
 }
 
 /* Form group for inputs */
@@ -35,36 +36,45 @@
 }
 
 /* Label styling */
-.form-label {
+.admin-form-label {
   display: block;
   margin-bottom: 8px;
   font-weight: bold;
-  color: #555;
+  font-size: 16px;
+  color: #002a56;
 }
 
 /* Input styling */
 .form-input {
   width: 100%;
   padding: 10px;
-  border: 1px solid #ccc;
-  border-radius: 5px;
+  border: none; /* Remove default border */
+  border-bottom: 1px solid #ccc; /* Add bottom border for underline effect */
+  border-radius: 10px; /* Remove border radius for a clean underline */
   font-size: 16px;
-  transition: border-color 0.3s ease;
+  transition: border-bottom-color 0.3s ease; /* Smooth transition for underline color */
 }
 
+/* Underline effect on hover */
+.form-input:hover {
+  border-bottom-color: #002a56; /* Change color of underline on hover */
+  border-width: 3px;
+}
+
+/* Input focus effect */
 .form-input:focus {
-  border-color: #007bff;
-  outline: none;
+  border-bottom-color: #002a56; /* Change color of underline on focus */
+  outline: none; /* Remove default outline */
 }
 
 /* Button styling */
 .btn-login {
   width: 100%;
   padding: 12px;
-  background-color: #007bff;
+  background-color: #002a56;
   color: white;
   border: none;
-  border-radius: 5px;
+  border-radius: 10px;
   font-size: 16px;
   cursor: pointer;
   transition: background-color 0.3s ease;
@@ -102,4 +112,3 @@
     font-size: 14px;
   }
 }
-
