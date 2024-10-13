@@ -27,23 +27,23 @@ function App() {
     <Router>
       <Routes>
       <Route path="/" element={<WelcomePage />} />
-        <Route path="/add-product" element={<CreateProduct />} />
-        <Route path="/all-vendors" element={<AllVendors />} />
-        <Route path="/vendor-products" element={<VendorProducts />} />
+        <Route path="/add-product" element={user ? <CreateProduct />: <WelcomePage />} />
+        <Route path="/all-vendors" element={user ? <AllVendors />: <WelcomePage />} />
+        <Route path="/vendor-products" element={user ?<VendorProducts />: <WelcomePage />} />
         <Route path="/vendor-login" element={<VendorLogin />} />
         <Route path="/admin-login" element={<AdminLogin />} />
-        <Route path="/admin-products" element={<AdminProductPage />} />
+        <Route path="/admin-products" element={user ?<AdminProductPage />: <WelcomePage />} />
         <Route path="/csr-login" element={<CSRLogin />} />
-        <Route path="/vendor-profile" element={<VendorProfile />} />
-        <Route path="/vendor-register" element={<RegisterVendor />} />
-        <Route path="/all-users" element={<AllUsers />} />
-        <Route path="/vendor-update" element={<UpdateVendorProfile />} />
+        <Route path="/vendor-profile" element={user ?<VendorProfile />: <WelcomePage />} />
+        <Route path="/vendor-register" element={user ?<RegisterVendor />: <WelcomePage />} />
+        <Route path="/all-users" element={user ?<AllUsers />: <WelcomePage />} />
+        <Route path="/vendor-update" element={user ?<UpdateVendorProfile />: <WelcomePage />} />
 
-        <Route path="/update-product/:id" element={<UpdateProduct />} />
-        <Route path="/vendor-orders" element={<VendorOrderListPage />} />
-        <Route path="/vendor-notifications" element={<VendorNotifications />} />
-        <Route path="/csr-orders" element={<CSROrderList />} />
-        <Route path="/csr-notifications" element={<CSRNotificationList />} />
+        <Route path="/update-product/:id" element={user ?<UpdateProduct />: <WelcomePage />} />
+        <Route path="/vendor-orders" element={user ?<VendorOrderListPage />: <WelcomePage />} />
+        <Route path="/vendor-notifications" element={user ?<VendorNotifications />: <WelcomePage />} />
+        <Route path="/csr-orders" element={user ?<CSROrderList />: <WelcomePage />} />
+        <Route path="/csr-notifications" element={user ?<CSRNotificationList />: <WelcomePage />} />
       </Routes>
     </Router>
   );

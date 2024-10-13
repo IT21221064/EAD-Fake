@@ -22,7 +22,7 @@ public class VendorController : ControllerBase
     [HttpPost("register")]
     public async Task<IActionResult> Register([FromBody] RegisterVendorDto vdto)
     {
-        if (!await _vendorService.RegisterVendor(vdto.Username, vdto.Email, vdto.Password))
+        if (!await _vendorService.RegisterVendor(vdto.Username, vdto.Email, vdto.Password, vdto.NIC, vdto.Birthday))
             return BadRequest(new { error = "Username already exists." });
 
         // Return a JSON object instead of a plain string
@@ -79,6 +79,10 @@ public class RegisterVendorDto
     public string? Username { get; set; }
     public string? Email { get; set; }
     public string? Password { get; set; }
+
+    public int NIC { get; set; }
+
+    public DateTime Birthday { get; set; }
 }
 
 public class LoginVendorDto
