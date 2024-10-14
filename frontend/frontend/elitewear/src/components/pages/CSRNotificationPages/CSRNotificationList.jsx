@@ -1,6 +1,10 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
 import "./CSRNotificationList.css";
+import AdminNavBar from "./../../common/adminNavBar/AdminNavBar";
+import CSRNavBar from "./../../common/csrNavBar/CSRNavBar";
+import { getUserRole } from "../../../hooks/useRoles";
+import Footer from "../../common/footer/Footer";
 
 const CSRNotificationList = () => {
   const [notifications, setNotifications] = useState([]);
@@ -9,6 +13,7 @@ const CSRNotificationList = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [currentNotification, setCurrentNotification] = useState(null);
   const [replyMessage, setReplyMessage] = useState("");
+  const userRole = getUserRole();
 
   useEffect(() => {
     const fetchCustomerNotifications = async () => {
@@ -73,77 +78,88 @@ const CSRNotificationList = () => {
   }
 
   return (
-    <div className="csr-notifications-container">
-      <h2>Notifications From Customers</h2>
-      {notifications.length === 0 ? (
-        <p>No notifications found from customers.</p>
-      ) : (
-        <table className="csr-notifications-table">
-          <thead>
-            <tr>
-              <th>ID</th>
-              <th>Message</th>
-              <th>Date</th>
-              <th>Reply</th>
-            </tr>
-          </thead>
-          <tbody>
-            {notifications.map((notification) => (
-              <tr key={notification.id}>
-                <td>{notification.id}</td>
-                <td>{notification.message}</td>
-                <td>
-                  {new Date(notification.createdAt).toLocaleString("en-US", {
-                    year: "numeric",
-                    month: "long",
-                    day: "numeric",
-                    hour: "2-digit",
-                    minute: "2-digit",
-                    second: "2-digit",
-                  })}
-                </td>
-                <td>
-                  <button
-                    className="csr-notifications-reply-btn"
-                    onClick={() => openReplyModal(notification)}
-                  >
-                    Reply
-                  </button>
-                </td>
-              </tr>
-            ))}
-          </tbody>
-        </table>
-      )}
+    <div>
+      {" "}
+      {userRole === "admin0000" && <AdminNavBar />}
+      {userRole === "csr" && <CSRNavBar />}
+      <div className="csr-notifications-container">
+        <div className="csr-order-inner-container">
+          <h2>Notifications From Customers</h2>
+          {notifications.length === 0 ? (
+            <p>No notifications found from customers.</p>
+          ) : (
+            <table className="csr-notifications-table">
+              <thead>
+                <tr>
+                  <th>ID</th>
+                  <th>Message</th>
+                  <th>Date</th>
+                  <th>Reply</th>
+                </tr>
+              </thead>
+              <tbody>
+                {notifications.map((notification) => (
+                  <tr key={notification.id}>
+                    <td>{notification.id}</td>
+                    <td>{notification.message}</td>
+                    <td>
+                      {new Date(notification.createdAt).toLocaleString(
+                        "en-US",
+                        {
+                          year: "numeric",
+                          month: "long",
+                          day: "numeric",
+                          hour: "2-digit",
+                          minute: "2-digit",
+                          second: "2-digit",
+                        }
+                      )}
+                    </td>
+                    <td>
+                      <button
+                        className="csr-notifications-reply-btn"
+                        onClick={() => openReplyModal(notification)}
+                      >
+                        Reply
+                      </button>
+                    </td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          )}
 
-      {isModalOpen && (
-        <div className="csr-modal-overlay">
-          <div className="csr-modal">
-            <h2>Reply to Notification</h2>
-            <p>{currentNotification?.message}</p>
-            <textarea
-              className="csr-modal-textarea"
-              value={replyMessage}
-              onChange={(e) => setReplyMessage(e.target.value)}
-              placeholder="Type your reply here"
-              rows={5}
-            />
-            <br />
-            <button
-              className="csr-modal-btn csr-modal-btn-submit"
-              onClick={handleReplySubmit}
-            >
-              Send Reply
-            </button>
-            <button
-              className="csr-modal-btn csr-modal-btn-cancel"
-              onClick={closeReplyModal}
-            >
-              Cancel
-            </button>
-          </div>
+          {isModalOpen && (
+            <div className="csr-modal-overlay">
+              <div className="csr-modal">
+                <h2>Reply to Notification</h2>
+                <p>{currentNotification?.message}</p>
+                <textarea
+                  className="csr-modal-textarea"
+                  value={replyMessage}
+                  onChange={(e) => setReplyMessage(e.target.value)}
+                  placeholder="Type your reply here"
+                  rows={5}
+                />
+                <br />
+                <button
+                  className="csr-modal-btn csr-modal-btn-submit"
+                  onClick={handleReplySubmit}
+                >
+                  Send Reply
+                </button>
+                <button
+                  className="csr-modal-btn csr-modal-btn-cancel"
+                  onClick={closeReplyModal}
+                >
+                  Cancel
+                </button>
+              </div>
+            </div>
+          )}
         </div>
-      )}
+      </div>
+      <Footer />
     </div>
   );
 };

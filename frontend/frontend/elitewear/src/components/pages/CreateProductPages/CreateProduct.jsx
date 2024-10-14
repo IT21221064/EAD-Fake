@@ -100,96 +100,97 @@ const CreateProduct = () => {
 
   return (
     <>
- <VendorNavBar/>    
-  
-    <div className="create-product-container">
-      <h2 className="create-product-title">Create Product</h2>
-      <form onSubmit={handleSubmit} className="create-product-form">
-        <div className="form-group">
-          <label className="form-label">Id</label>
-          <input
-            type="text"
-            name="id"
-            className="form-input"
-            value={product.id}
-            onChange={handleChange}
-            required
-          />
-        </div>
-        <div className="form-group">
-          <label className="form-label">Name</label>
-          <input
-            type="text"
-            name="name"
-            className="form-input"
-            value={product.name}
-            onChange={handleChange}
-            required
-          />
-        </div>
-        <div className="form-group">
-          <label className="form-label">Description</label>
-          <input
-            type="text"
-            name="description"
-            className="form-input"
-            value={product.description}
-            onChange={handleChange}
-          />
-        </div>
-        <div className="form-group">
-          <label className="form-label">Price</label>
-          <input
-            type="number"
-            name="price"
-            className="form-input"
-            value={product.price}
-            onChange={handleChange}
-            required
-          />
-        </div>
-        <div className="form-group">
-          <label className="form-label">Category</label>
-          <select
-            name="category"
-            className="form-select"
-            value={product.category}
-            onChange={handleChange}
-            required
-          >
-            <option value="">Select a category</option>
-            {categories.map((category, index) => (
-              <option key={index} value={category}>
-                {category}
-              </option>
-            ))}
-          </select>
-        </div>
-        <div className="form-group">
-          <label className="form-label">Quantity</label>
-          <input
-            type="number"
-            name="quantity"
-            className="form-input"
-            value={product.quantity}
-            onChange={handleChange}
-            required
-          />
-        </div>
-        <div className="form-group">
-          <label className="form-label">Upload Image</label>
-          <input
-            type="file"
-            className="form-file-input"
-            onChange={handleImageChange}
-            accept="image/*"
-          />
-        </div>
-        <button type="submit" className="btn-submit">
-          Create Product
-        </button>
-      </form>
-    </div>
+      <VendorNavBar />
+      <div className="create-product-container">
+        <h2 className="create-product-title">Create Product</h2>
+        <form onSubmit={handleSubmit} className="create-product-form">
+          <div className="form-grid">
+            <div className="form-group">
+              <label className="form-label">Id</label>
+              <input
+                type="text"
+                name="id"
+                className="form-input"
+                value={product.id}
+                onChange={handleChange}
+                required
+              />
+            </div>
+            <div className="form-group">
+              <label className="form-label">Name</label>
+              <input
+                type="text"
+                name="name"
+                className="form-input"
+                value={product.name}
+                onChange={handleChange}
+                required
+              />
+            </div>
+            <div className="form-group">
+              <label className="form-label">Description</label>
+              <input
+                type="text"
+                name="description"
+                className="form-input"
+                value={product.description}
+                onChange={handleChange}
+              />
+            </div>
+            <div className="form-group">
+              <label className="form-label">Price</label>
+              <input
+                type="number"
+                name="price"
+                className="form-input"
+                value={product.price}
+                onChange={handleChange}
+                required
+              />
+            </div>
+            <div className="form-group">
+              <label className="form-label">Category</label>
+              <select
+                name="category"
+                className="form-select"
+                value={product.category}
+                onChange={handleChange}
+                required
+              >
+                <option value="">Select a category</option>
+                {categories.map((category, index) => (
+                  <option key={index} value={category}>
+                    {category}
+                  </option>
+                ))}
+              </select>
+            </div>
+            <div className="form-group">
+              <label className="form-label">Quantity</label>
+              <input
+                type="number"
+                name="quantity"
+                className="form-input"
+                value={product.quantity}
+                onChange={handleChange}
+                required
+              />
+            </div>
+            <div className="form-group">
+              <label className="form-label">Upload Image</label>
+              <input
+                type="file"
+                className="form-file-input"
+                onChange={handleImageChange}
+                accept="image/*"
+              />
+            </div>
+          </div>
+          <button type="submit" className="btn-submit">
+            Create Product
+          </button>
+        </form>
+      </div>
     </>
   );
 };

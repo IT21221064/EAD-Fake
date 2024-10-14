@@ -32,10 +32,20 @@ namespace EliteWear.Services
 
         public async Task CreateProductAsync(Product product)
         {
-            // No need to set Id here, it is handled in the Product constructor
-            // product.Status = "Pending";
-            await _context.Products.InsertOneAsync(product);
+            // Check if a product with the same Id already exists
+            var existingProduct = await GetProductByIdAsync(product.Id);
+
+            if (existingProduct != null)
+            {
+                await RestockProductQuantityAsync(product.Id, product.Quantity);
+            }
+            else
+            {
+
+                await _context.Products.InsertOneAsync(product);
+            }
         }
+
 
         public async Task UpdateProductAsync(int id, Product updatedProduct)
         {

@@ -1,6 +1,6 @@
 /* Container for the order list */
 .csr-order-container {
-  background-image: url('../../../assets/flat-design-with-headphones-and-laptop-illustration-ai-generative-free-photo.jpg'); /* Update with the correct path */
+  background-image: url("../../../assets/flat-design-with-headphones-and-laptop-illustration-ai-generative-free-photo.jpg"); /* Update with the correct path */
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -11,8 +11,7 @@
   font-family: "Afacad Flux", sans-serif;
 }
 
-.csr-order-inner-container{
-
+.csr-order-inner-container {
   max-width: 90%;
   margin: 40px auto;
   background-color: #d0d6fb;
@@ -21,7 +20,6 @@
   padding-bottom: 30px;
   padding-right: 60px;
   border-radius: 15px;
-
 }
 /* Title styling */
 .csr-order-title {
@@ -117,7 +115,7 @@
 }
 
 /* Search and Filter Container */
-.search-filter-container {
+.csr-search-filter-container {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -229,6 +227,5 @@
 
   .csr-order-update-btn {
     padding: 8px 14px;
-    
   }
 }
