@@ -47,6 +47,7 @@ namespace EliteWear.Services
 
         public async Task UpdateReviewAsync(int id, Review updatedReview)
         {
+            updatedReview.Id = id;
             await _context.Reviews.ReplaceOneAsync(review => review.Id == id, updatedReview);
         }
 
